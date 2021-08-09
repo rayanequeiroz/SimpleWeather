@@ -1,13 +1,29 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'PTSans';
+  font-weight: 400;
+  src: url(./fonts/PTSans-Regular.ttf);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'PTSans', sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.city-form {
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+  margin-top: 250px;
+}
+
+.city-form form {
+  margin-bottom: 50px;
+  font-family: 'PTSans', sans-serif;
 }
