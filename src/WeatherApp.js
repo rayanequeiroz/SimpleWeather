@@ -17,7 +17,7 @@ class WeatherApp extends React.Component {
   render() {
     return (
       <div className="city-form">
-        <CityForm onChange={this.handleEvent} />
+        <CityForm value={this.state.value} onChange={this.handleEvent} />
         <Weather location={this.state.value} />
       </div>
     );

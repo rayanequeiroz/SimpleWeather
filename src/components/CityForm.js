@@ -6,7 +6,7 @@ const CityForm = (props) => {
     <form>
       <label>
         Please, pick your city:
-        <select value="Moscow" onChange={(e) => props.onChange(e)}>
+        <select value={props.value} onChange={(e) => props.onChange(e)}>
           <option value="Moscow">Moscow</option>
           <option value="Samara">Samara</option>
           <option value="Murmansk">Murmansk</option>

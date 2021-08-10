@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import loadData from '../functions/loadData';
+import loadData from '../helpers/loadData';
 import './Weather.css';
 
 const Weather = (props) => {
