@@ -5,17 +5,15 @@ import './CityForm.css';
 const CityForm = (props) => {
 
   return (
-    <form className="city-search">
-      <label>
-        Right now in
-        <AutosizeInput
-          minWidth="70"
-          inputStyle={{ fontSize: 30 }}
-          value={props.value}
-          onChange={(e) => props.onChange(e)}
-        />
-      </label>
-    </form>
+    <div className="city-search">
+      Right now in
+      <AutosizeInput
+        minWidth="70"
+        inputStyle={{ fontSize: 30 }}
+        value={props.value}
+        onChange={(e) => props.onChange(e)}
+      />
+    </div>
   )
 }
 
