@@ -8,7 +8,7 @@ const Weather = (props) => {
 
   const loadWeather = async () => {
     const data = await loadData(location);
-    setTemp(data.temperature);
+    setTemp(data.current.temp_c);
   };
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const Weather = (props) => {
   return (
     <div className="weather-app border">
       <h1>How do you like the weather in {location}?</h1>
-      <h2>It's {temp} outside :)</h2>
+      <h2>It's {temp} C° outside :)</h2>
       <button onClick={loadWeather} className="btn-update">Update</button>
     </div>
   );
