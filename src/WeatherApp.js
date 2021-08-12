@@ -5,7 +5,7 @@ import CityForm from './components/CityForm';
 class WeatherApp extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: '...' };
+    this.state = { value: '' };
 
     this.handleEvent = this.handleEvent.bind(this);
   }
@@ -16,7 +16,7 @@ class WeatherApp extends React.Component {
 
   render() {
     return (
-      <div className="city-form">
+      <div className="app">
         <CityForm value={this.state.value} onChange={this.handleEvent} />
         <Weather location={this.state.value} />
       </div>

@@ -16,15 +16,30 @@ body {
   background-color: #ffffff;
 }
 
-.city-form {
+.app {
   margin: 0 auto;
   max-width: 800px;
   text-align: center;
   margin-top: 250px;
 }
 
-.city-form form {
+.app form {
   margin-bottom: 50px;
   font-family: 'PTSans', sans-serif;
 }
 
+
+.city-search input {
+  font-family: inherit;
+  height: 40px;
+  display: inline-block;
+  border: none;
+  border-bottom: 2px solid black;
+  padding: 10px;
+  font-size: 30px;
+}
+
+.city-search input:focus,
+.city-search input:hover {
+  outline: none !important;
+}
