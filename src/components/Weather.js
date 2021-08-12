@@ -7,8 +7,12 @@ const Weather = (props) => {
   const [temp, setTemp] = useState('NOT FOUND');
 
   const loadWeather = async () => {
-    const data = await loadData(location);
-    setTemp(data.current.temp_c);
+    try {
+      const data = await loadData(location);
+      setTemp(data.current.temp_c);
+    } catch (e) {
+      console.error(e);
+    }
   };
 
   useEffect(() => {

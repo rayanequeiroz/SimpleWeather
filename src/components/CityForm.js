@@ -1,17 +1,13 @@
 import React from 'react';
+import './CityForm.css';
 
 const CityForm = (props) => {
 
   return (
     <form>
       <label>
-        Please, pick your city:
-        <select value={props.value} onChange={(e) => props.onChange(e)}>
-          <option value="Moscow">Moscow</option>
-          <option value="Samara">Samara</option>
-          <option value="Murmansk">Murmansk</option>
-          <option value="Vladivostok">Vladivostok</option>
-        </select>
+        Right now in
+        <input type="text" onChange={(e) => props.onChange(e)}></input>
       </label>
     </form>
   )

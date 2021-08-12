@@ -5,7 +5,7 @@ import CityForm from './components/CityForm';
 class WeatherApp extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: 'Moscow' };
+    this.state = { value: '...' };
 
     this.handleEvent = this.handleEvent.bind(this);
   }
@@ -23,6 +23,5 @@ class WeatherApp extends React.Component {
     );
   }
 }
-
 
 export default WeatherApp;
