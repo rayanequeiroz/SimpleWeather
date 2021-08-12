@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/weather-by-evergreen/static/css/main.2e6423e7.chunk.css",
-    "main.js": "/weather-by-evergreen/static/js/main.70d508a5.chunk.js",
-    "main.js.map": "/weather-by-evergreen/static/js/main.70d508a5.chunk.js.map",
+    "main.css": "/weather-by-evergreen/static/css/main.1459a2ec.chunk.css",
+    "main.js": "/weather-by-evergreen/static/js/main.063d375c.chunk.js",
+    "main.js.map": "/weather-by-evergreen/static/js/main.063d375c.chunk.js.map",
     "runtime-main.js": "/weather-by-evergreen/static/js/runtime-main.3fb0b5d1.js",
     "runtime-main.js.map": "/weather-by-evergreen/static/js/runtime-main.3fb0b5d1.js.map",
     "static/js/2.1c106e77.chunk.js": "/weather-by-evergreen/static/js/2.1c106e77.chunk.js",
     "static/js/2.1c106e77.chunk.js.map": "/weather-by-evergreen/static/js/2.1c106e77.chunk.js.map",
     "index.html": "/weather-by-evergreen/index.html",
-    "static/css/main.2e6423e7.chunk.css.map": "/weather-by-evergreen/static/css/main.2e6423e7.chunk.css.map",
+    "static/css/main.1459a2ec.chunk.css.map": "/weather-by-evergreen/static/css/main.1459a2ec.chunk.css.map",
     "static/js/2.1c106e77.chunk.js.LICENSE.txt": "/weather-by-evergreen/static/js/2.1c106e77.chunk.js.LICENSE.txt",
     "static/media/index.css": "/weather-by-evergreen/static/media/Roboto-Regular.a8d6ac03.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.3fb0b5d1.js",
     "static/js/2.1c106e77.chunk.js",
-    "static/css/main.2e6423e7.chunk.css",
-    "static/js/main.70d508a5.chunk.js"
+    "static/css/main.1459a2ec.chunk.css",
+    "static/js/main.063d375c.chunk.js"
   ]
 }
