@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import AutosizeInput from 'react-input-autosize';
-import Condition from './Condition';
+import WeatherCondition from './WeatherCondition';
 import './CitySearch.css';
 
 const CitySearch = (props) => {
@@ -13,7 +13,7 @@ const CitySearch = (props) => {
         value={props.value}
         onChange={(e) => props.onChange(e)}
       />
-      <Condition condition={props.condition} location={props.location} responseCity={props.responseCity} />
+      <WeatherCondition condition={props.condition} location={props.location} responseCity={props.responseCity} />
     </div>
   )
 }

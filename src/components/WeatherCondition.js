@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const Condition = (props) => {
+const WeatherCondition = (props) => {
   const { location } = props;
   const { responseCity } = props;
   const { condition } = props;
@@ -18,5 +18,5 @@ const Condition = (props) => {
   }
 }
 
-export default Condition;
+export default WeatherCondition;
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import './Weather.css';
+import './Forecast.css';
 
-const Weather = (props) => {
+const Forecast = (props) => {
   const { temp } = props;
   const { location } = props;
   const { responseCity } = props;
@@ -22,4 +22,4 @@ const Weather = (props) => {
   }
 };
 
-export default Weather;
+export default Forecast;
