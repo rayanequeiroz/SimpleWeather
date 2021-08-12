@@ -1,7 +1,7 @@
 @font-face {
-  font-family: 'PTSans';
+  font-family: 'Roboto';
   font-weight: 400;
-  src: url(./fonts/PTSans-Regular.ttf);
+  src: url(./fonts/Roboto-Regular.ttf);
 }
 
 * {
@@ -9,7 +9,7 @@
 }
 
 html {
-  font-family: 'PTSans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -27,3 +27,4 @@ body {
   margin-bottom: 50px;
   font-family: 'PTSans', sans-serif;
 }
+
