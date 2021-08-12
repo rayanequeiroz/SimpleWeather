@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom';
 import './index.css';
-import WeatherApp from './WeatherApp';
+import App from './App';
 
-ReactDOM.render(<WeatherApp />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));

@@ -1,24 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import loadData from '../helpers/loadData';
 import './Weather.css';
 
 const Weather = (props) => {
+  const { temp } = props;
   const { location } = props;
-  const [temp, setTemp] = useState('');
-  const [responseCity, setResponseCity] = useState('');
-
-  const loadWeather = async () => {
-    try {
-      const data = await loadData(location);
-      setTemp(data.current.temp_c);
-      setResponseCity(data.location.name);
-    } catch (e) {
-      console.error(e);
-    }
-  };
-  useEffect(() => {
-    loadWeather(location);
-  }, [loadWeather, location]);
+  const { responseCity } = props;
 
   if (!temp || location !== responseCity) {
     return (

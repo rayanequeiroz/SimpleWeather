@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import AutosizeInput from 'react-input-autosize';
-import './CityForm.css';
+import Condition from './Condition';
+import './CitySearch.css';
 
-const CityForm = (props) => {
-
+const CitySearch = (props) => {
   return (
     <div className="city-search">
       Right now in
@@ -13,8 +13,9 @@ const CityForm = (props) => {
         value={props.value}
         onChange={(e) => props.onChange(e)}
       />
+      <Condition condition={props.condition} location={props.location} responseCity={props.responseCity} />
     </div>
   )
 }
 
-export default CityForm;
+export default CitySearch;
