@@ -13,7 +13,7 @@ const CitySearch = (props) => {
         value={props.value}
         onChange={(e) => props.onChange(e)}
       />
-      <WeatherCondition condition={props.condition} location={props.location} responseCity={props.responseCity} />
+      <WeatherCondition condition={props.condition} location={props.location} responseLocation={props.responseLocation} />
     </div>
   )
 }

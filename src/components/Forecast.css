@@ -1,24 +1,41 @@
 .weather {
+  gap: 30px;
   margin: 0 auto;
   text-align: center;
   max-width: 800px;
-  display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather__icon-temp {
+  gap: 30px;
   align-items: center;
 }
 
-.btn-update {
-  width: 600px;
-  height: 50px;
-  border: 0;
-  background-color: #fce77e;
-  margin-bottom: 24px;
+.temp {
+  font-size: 80px;
+  font-weight: 300;
 }
 
-.btn-update:hover {
-  background-color: #fff27d;
+img {
+  width: 96px;
+  height: 96px;
 }
 
-.border {
-  border: 2px solid #fce77e;
+.flex {
+  display: flex;
+}
+
+.properties {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.properties__value {
+  font-size: 26px;
+}
+
+.properties__value span {
+  font-size: 13px;
+  margin-left: 3px;
 }
