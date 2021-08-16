@@ -18,6 +18,13 @@ const App = () => {
   const [humidity, setHumidity] = useState('');
   const [icon, setIcon] = useState('');
 
+  useEffect(() => {
+    if (localStorage.location && location === "") {
+      setLocation(localStorage.getItem(location));
+      return () => { localStorage.setItem('location', location) };
+    }
+  }, [])
+
   const debouncedLocation = useDebounce(location, 700);
 
   const loadWeather = async () => {
@@ -31,6 +38,8 @@ const App = () => {
       setPrecip(data.current.precip_mm);
       setHumidity(data.current.humidity);
       setIcon(data.current.condition.icon);
+
+      localStorage.setItem('location', location);
     } catch (e) {
       console.error(e);
     }
