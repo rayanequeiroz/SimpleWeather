@@ -20,8 +20,10 @@ const App = () => {
 
   useEffect(() => {
     if (localStorage.location && location === "") {
-      setLocation(localStorage.getItem(location));
-      return () => { localStorage.setItem('location', location) };
+      setLocation(localStorage.getItem('location'));
+      return () => {
+        location.onChange(localStorage.setItem('location', location));
+      };
     }
   }, [])
 
