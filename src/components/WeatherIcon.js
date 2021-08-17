@@ -9,7 +9,7 @@ const WeatherIcon = (props) => {
     timeOfDay = "night";
   }
 
-  const weatherSrc = `../../public/icons/${timeOfDay}/${code}.svg`;
+  const weatherSrc = `./public/icons/${timeOfDay}/${code}.svg`;
 
   return (
     <div>
