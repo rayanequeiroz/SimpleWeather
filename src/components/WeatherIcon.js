@@ -9,11 +9,11 @@ const WeatherIcon = (props) => {
     timeOfDay = "night";
   }
 
-  const weatherSrc = `./public/icons/${timeOfDay}/${code}.svg`;
+  const weatherSrc = `/icons/${timeOfDay}/${code}.svg`;
 
   return (
     <div>
-      <img src={weatherSrc} alt="Weather icon"></img>
+      <img src={process.env.PUBLIC_URL + { weatherSrc }} alt="Weather icon"></img>
     </div>
   )
 
