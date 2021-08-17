@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import WeatherIcon from './WeatherIcon';
 import './Forecast.css';
 
 const Forecast = (props) => {
@@ -9,7 +10,10 @@ const Forecast = (props) => {
   const { wind } = props;
   const { precip } = props;
   const { humidity } = props;
-  const { icon } = props;
+  const { code } = props;
+  const { isDay } = props;
+
+  // const { icon } = props;
 
   if (!temp || location !== responseLocation) {
     return (
@@ -21,7 +25,7 @@ const Forecast = (props) => {
     return (
       <div className="weather flex">
         <div className="weather__icon-temp flex">
-          <img src={icon} alt="Weather icon"></img>
+          <WeatherIcon code={code} isDay={isDay}></WeatherIcon>
           <div>
             <h1 className="temp">{temp}°</h1>
           </div>

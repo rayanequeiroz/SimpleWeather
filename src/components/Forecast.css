@@ -17,11 +17,6 @@
   font-weight: 300;
 }
 
-img {
-  width: 96px;
-  height: 96px;
-}
-
 .flex {
   display: flex;
 }

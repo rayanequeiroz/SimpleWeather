@@ -16,7 +16,9 @@ const App = () => {
   const [wind, setWind] = useState('');
   const [precip, setPrecip] = useState('');
   const [humidity, setHumidity] = useState('');
-  const [icon, setIcon] = useState('');
+  // const [icon, setIcon] = useState('');
+  const [code, setCode] = useState('');
+  const [isDay, setIsDay] = useState('');
 
   useEffect(() => {
     if (localStorage.location && location === "") {
@@ -39,7 +41,9 @@ const App = () => {
       setWind(data.current.wind_mph);
       setPrecip(data.current.precip_mm);
       setHumidity(data.current.humidity);
-      setIcon(data.current.condition.icon);
+      setCode(data.current.condition.code);
+      setIsDay(data.current.is_day);
+      // setIcon(data.current.condition.icon);
 
       localStorage.setItem('location', location);
     } catch (e) {
@@ -62,7 +66,7 @@ const App = () => {
   return (
     <div className="app">
       <CitySearch value={location} onChange={handleEvent} condition={condition} location={debouncedLocation} responseLocation={responseLocation} />
-      <Forecast location={debouncedLocation} responseLocation={responseLocation} country={country} temp={temp} wind={wind} precip={precip} humidity={humidity} icon={icon} />
+      <Forecast location={debouncedLocation} responseLocation={responseLocation} country={country} temp={temp} wind={wind} precip={precip} humidity={humidity} code={code} isDay={isDay} />
     </div>
   );
 }
