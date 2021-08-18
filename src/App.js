@@ -14,7 +14,7 @@ const App = () => {
   const [temp, setTemp] = useState('');
   const [condition, setCondition] = useState('');
   const [wind, setWind] = useState('');
-  const [precip, setPrecip] = useState('');
+  const [pressure, setPressure] = useState('');
   const [humidity, setHumidity] = useState('');
   const [code, setCode] = useState('');
   const [isDay, setIsDay] = useState('');
@@ -39,7 +39,7 @@ const App = () => {
       setTemp(data.current.temp_c);
       setCondition(`it's ${(data.current.condition.text).toLowerCase()}`);
       setWind(data.current.wind_mph);
-      setPrecip(data.current.precip_mm);
+      setPressure(data.current.pressure_mb);
       setHumidity(data.current.humidity);
       setCode(data.current.condition.code);
       setIsDay(data.current.is_day);
@@ -65,7 +65,7 @@ const App = () => {
   return (
     <div className="app">
       <CitySearch value={location} onChange={handleEvent} condition={condition} location={debouncedLocation} responseLocation={responseLocation} />
-      <Forecast location={debouncedLocation} responseLocation={responseLocation} country={country} temp={temp} wind={wind} precip={precip} humidity={humidity} code={code} isDay={isDay} />
+      <Forecast location={debouncedLocation} responseLocation={responseLocation} country={country} temp={temp} wind={wind} pressure={pressure} humidity={humidity} code={code} isDay={isDay} />
     </div>
   );
 }

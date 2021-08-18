@@ -8,7 +8,7 @@ const Forecast = (props) => {
   const { country } = props;
   const { temp } = props;
   const { wind } = props;
-  const { precip } = props;
+  const { pressure } = props;
   const { humidity } = props;
   const { code } = props;
   const { isDay } = props;
@@ -32,7 +32,7 @@ const Forecast = (props) => {
         </div>
         <div className="flex properties">
           <div className="properties__value">{wind}<span>mph</span></div>
-          <div className="properties__value">{precip}<span>mm</span></div>
+          <div className="properties__value">{pressure}<span>mm</span></div>
           <div className="properties__value">{humidity}<span>%</span></div>
         </div>
       </div>
