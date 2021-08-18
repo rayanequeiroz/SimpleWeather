@@ -1,3 +1,5 @@
-.city-search {
-  font-size: 30px;
+.city-search h1 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 400;
 }

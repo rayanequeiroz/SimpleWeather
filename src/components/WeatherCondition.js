@@ -14,7 +14,7 @@ const WeatherCondition = (props) => {
 
   if (condition) {
     return (
-      <span className="condition">{condition}</span>
+      <div className="condition">{condition}</div>
     );
   }
 }

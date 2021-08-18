@@ -1,20 +1,24 @@
 .weather {
-  gap: 30px;
-  margin: 0 auto;
   text-align: center;
-  max-width: 800px;
   align-items: center;
-  justify-content: center;
+  gap: 40px;
 }
 
 .weather__icon-temp {
-  gap: 30px;
   align-items: center;
+  width: 354px;
+  gap: 34px;
 }
 
 .temp {
-  font-size: 80px;
+  width: 160px;
+}
+
+.temp h1 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 120px;
   font-weight: 300;
+  margin: 0;
 }
 
 .flex {
@@ -24,13 +28,18 @@
 .properties {
   flex-direction: column;
   align-items: flex-start;
+  font-family: 'Roboto', sans-serif;
 }
 
 .properties__value {
-  font-size: 26px;
+  font-size: 27px;
 }
 
 .properties__value span {
-  font-size: 13px;
-  margin-left: 3px;
+  font-size: 17px;
+  margin-left: 8px;
+}
+
+.w-160 {
+  width: 160px;
 }

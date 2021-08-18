@@ -3,25 +3,28 @@
 }
 
 html {
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: 'Roboto Slab', serif;
 }
 
 body {
   background-color: #ffffff;
+  color: #fff;
 }
 
 .app {
   margin: 0 auto;
-  max-width: 800px;
+  width: 660px;
+  height: 428px;
   text-align: center;
   margin-top: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-.app form {
-  margin-bottom: 50px;
+  padding-top: 31px;
+  padding-left: 58px;
+  padding-right: 58px;
+  background: linear-gradient(180deg, #072F6A 0%, rgba(1, 33, 81, 0.869792) 0.01%, #2D81FF 100%);
+  border-radius: 40px;
+  box-shadow: 1px 5px 7px 1px #00000040;
 }
 
 
@@ -30,9 +33,14 @@ body {
   height: 40px;
   display: inline-block;
   border: none;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid white;
   padding: 10px;
   font-size: 30px;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700px;
 }
 
 .city-search input:focus,
