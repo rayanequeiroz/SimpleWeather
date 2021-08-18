@@ -3,3 +3,23 @@
   margin: 0;
   font-weight: 400;
 }
+
+.city-search input {
+  font-family: inherit;
+  height: 40px;
+  display: inline-block;
+  border: none;
+  border-bottom: 1px solid white;
+  padding: 10px;
+  font-size: 30px;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700px;
+}
+
+.city-search input:focus,
+.city-search input:hover {
+  outline: none !important;
+}
