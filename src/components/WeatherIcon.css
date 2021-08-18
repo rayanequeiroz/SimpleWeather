@@ -1,4 +1,5 @@
-#icon {
-  width: 160px;
-  max-height: 184px;
+.icon {
+  width: 159px;
+  max-height: 124px;
+  margin: 0 auto;
 }
