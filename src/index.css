@@ -3,7 +3,7 @@
 }
 
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
 }
 
 body {
@@ -22,7 +22,6 @@ body {
 
 .app form {
   margin-bottom: 50px;
-  font-family: 'PTSans', sans-serif;
 }
 
 

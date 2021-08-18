@@ -1,19 +1,3 @@
 .city-search {
-  font-family: inherit;
   font-size: 30px;
-}
-
-.city-search input {
-  font-family: inherit;
-  height: 40px;
-  display: inline-block;
-  border: none;
-  border-bottom: 2px solid black;
-  padding: 10px;
-  font-size: 30px;
-}
-
-.city-search input:focus,
-.city-search input:hover {
-  outline: none !important;
 }

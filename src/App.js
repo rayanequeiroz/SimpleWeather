@@ -16,7 +16,6 @@ const App = () => {
   const [wind, setWind] = useState('');
   const [precip, setPrecip] = useState('');
   const [humidity, setHumidity] = useState('');
-  // const [icon, setIcon] = useState('');
   const [code, setCode] = useState('');
   const [isDay, setIsDay] = useState('');
 
@@ -30,6 +29,7 @@ const App = () => {
   }, [])
 
   const debouncedLocation = useDebounce(location, 700);
+  // console.log(conversionToCorrect(location));
 
   const loadWeather = async () => {
     try {
@@ -43,7 +43,6 @@ const App = () => {
       setHumidity(data.current.humidity);
       setCode(data.current.condition.code);
       setIsDay(data.current.is_day);
-      // setIcon(data.current.condition.icon);
 
       localStorage.setItem('location', location);
     } catch (e) {

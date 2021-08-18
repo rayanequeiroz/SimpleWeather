@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import './WeatherCondition.css';
 
 const WeatherCondition = (props) => {
   const { location } = props;
   const { responseLocation } = props;
   const { condition } = props;
 
-  if (!condition || location !== responseLocation) {
+  if (!condition || location.toLowerCase() !== responseLocation.toLowerCase()) {
     return (
       <span></span>
     );
@@ -13,7 +14,7 @@ const WeatherCondition = (props) => {
 
   if (condition) {
     return (
-      <span>{condition}</span>
+      <span className="condition">{condition}</span>
     );
   }
 }

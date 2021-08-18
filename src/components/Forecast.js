@@ -15,7 +15,7 @@ const Forecast = (props) => {
 
   // const { icon } = props;
 
-  if (!temp || location !== responseLocation) {
+  if (!temp || location.toLowerCase() !== responseLocation.toLowerCase()) {
     return (
       <div></div>
     );
