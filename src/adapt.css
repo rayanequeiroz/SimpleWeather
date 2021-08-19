@@ -1,14 +1,20 @@
 @media (max-width: 440px) {
+  html {
+    min-width: 536px;
+  }
+
   body {
-    min-width: 456px;
-    padding: 0;
+    min-width: 536px;
+    padding-top: 100px;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .app {
     box-sizing: content-box;
     width: 340px;
     height: 580px;
-    margin-top: 100px;
+    margin-top: 150px;
     padding-top: 60px;
   }
 

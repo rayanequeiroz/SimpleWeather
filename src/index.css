@@ -15,8 +15,6 @@ body {
 }
 
 .app {
-  display: flex;
-  flex-direction: column;
   width: 580px;
   height: 430px;
   margin: 0 auto;
