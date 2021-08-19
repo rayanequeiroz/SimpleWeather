@@ -1,6 +1,7 @@
 @media (max-width: 440px) {
   body {
-    min-width: 460px;
+    min-width: 456px;
+    padding: 0;
   }
 
   .app {
