@@ -4,20 +4,16 @@
     padding: 0;
   }
 
-  html {
-    min-width: 440px;
-  }
-
   body {
-    min-width: 440px;
-    padding-right: 20px;
-    padding-left: 20px;
+    min-width: 414px;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .app {
-    width: 340px;
-    height: 580px;
-    margin-top: 150px;
+    width: 294px;
+    height: 520px;
+    margin-top: 80px;
     padding-top: 60px;
     padding-right: 30px;
     padding-left: 30px;
@@ -42,12 +38,12 @@
   }
 
   .city-search h1 {
-    font-size: 26px;
+    font-size: 20px;
   }
 
   .icon {
     justify-self: center;
-    min-height: 150px;
+    max-height: 150px;
   }
 
   .properties {
@@ -55,5 +51,57 @@
     gap: 30px;
     justify-self: center;
     margin-top: 20px;
+  }
+
+  .city-search input {
+    font-size: 25px !important;
+  }
+
+  .condition {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    min-width: 320px;
+  }
+
+  .app {
+    width: 220px;
+    height: 450px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .city-search h1 {
+    font-size: 15px;
+  }
+
+  .condition {
+    font-size: 15px;
+  }
+
+  .city-search input {
+    font-size: 20px !important;
+  }
+
+  .icon {
+    max-height: 90px;
+  }
+
+  .temp h1 {
+    font-size: 70px;
+  }
+
+  .properties {
+    gap: 15px;
+  }
+
+  .properties__value {
+    font-size: 15px;
+  }
+  .properties__value span {
+    font-size: 10px;
   }
 }
