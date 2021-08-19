@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box;
+  margin: 0;
 }
 
 html {
@@ -7,6 +7,9 @@ html {
 }
 
 body {
+  min-width: 740px;
+  padding-right: 40px;
+  padding-left: 40px;
   color: #fff;
   background-color: #fff;
 }
@@ -14,8 +17,8 @@ body {
 .app {
   display: flex;
   flex-direction: column;
-  width: 660px;
-  height: 428px;
+  width: 580px;
+  height: 430px;
   margin: 0 auto;
   margin-top: 250px;
   padding-top: 31px;

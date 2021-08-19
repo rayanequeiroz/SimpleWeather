@@ -1,0 +1,37 @@
+@media (max-width: 440px) {
+  body {
+    min-width: 460px;
+  }
+
+  .app {
+    box-sizing: content-box;
+    width: 340px;
+    height: 580px;
+    margin-top: 100px;
+    padding-top: 60px;
+  }
+
+  .weather {
+    grid-template-areas:
+      "icon             temp"
+      "properties properties";
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0;
+  }
+
+  .city-search h1 {
+    font-size: 26px;
+  }
+
+  .icon {
+    justify-self: center;
+    min-height: 150px;
+  }
+
+  .properties {
+    flex-direction: row;
+    gap: 30px;
+    justify-self: center;
+    margin-top: 20px;
+  }
+}

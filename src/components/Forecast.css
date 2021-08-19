@@ -1,10 +1,10 @@
 .weather {
   grid-template-areas: "icon temp properties";
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
   align-items: center;
   margin-top: 28px;
   text-align: center;
+  column-gap: 40px;
 }
 
 .temp {
