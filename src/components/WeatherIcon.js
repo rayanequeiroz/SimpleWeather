@@ -1,5 +1,4 @@
 import React from 'react';
-import './WeatherIcon.css';
 
 const WeatherIcon = (props) => {
   const { code, isDay } = props;
@@ -12,7 +11,7 @@ const WeatherIcon = (props) => {
   const weatherSrc = `/assets/icons/${timeOfDay}/${code}.svg`;
 
   return (
-    <div>
+    <div className="icon">
       <object data={process.env.PUBLIC_URL + weatherSrc} type="image/svg+xml" className="icon" />
     </div>
   )

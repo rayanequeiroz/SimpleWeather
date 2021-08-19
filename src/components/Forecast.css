@@ -1,38 +1,44 @@
 .weather {
-  text-align: center;
-  align-items: center;
+  grid-template-areas: "icon temp properties";
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
+  align-items: center;
   margin-top: 28px;
-  justify-content: center;
-}
-
-.weather__icon-temp {
-  align-items: center;
-  width: 354px;
-  gap: 40px;
+  text-align: center;
 }
 
 .temp {
-  width: 159px;
-  margin: 0 auto;
+  grid-area: temp;
+  justify-self: flex-start;
 }
 
 .temp h1 {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 120px;
-  font-weight: 300;
   margin: 0;
+  font-weight: 300;
+  font-size: 120px;
+  font-family: "Roboto Mono", monospace;
+  line-height: 1em;
+}
+
+.grid {
+  display: grid;
 }
 
 .flex {
   display: flex;
 }
 
+.icon {
+  grid-area: icon;
+  justify-self: flex-end;
+  max-height: 124px;
+}
+
 .properties {
   flex-direction: column;
+  grid-area: properties;
   align-items: flex-start;
-  font-family: 'Roboto', sans-serif;
-  width: 159px;
+  font-family: "Roboto", sans-serif;
 }
 
 .properties__value {
@@ -40,10 +46,6 @@
 }
 
 .properties__value span {
-  font-size: 17px;
   margin-left: 8px;
-}
-
-.w-160 {
-  width: 160px;
+  font-size: 17px;
 }

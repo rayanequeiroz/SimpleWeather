@@ -21,12 +21,10 @@ const Forecast = (props) => {
 
   if (temp) {
     return (
-      <div className="weather flex">
-        <div className="weather__icon-temp flex">
-          <WeatherIcon code={code} isDay={isDay}></WeatherIcon>
-          <div className="temp">
-            <h1>{temp.toFixed()}</h1>
-          </div>
+      <div className="weather grid">
+        <WeatherIcon code={code} isDay={isDay} className="icon"></WeatherIcon>
+        <div className="temp">
+          <h1>{temp.toFixed()}</h1>
         </div>
         <div className="flex properties">
           <div className="properties__value">{wind}<span>m/s</span></div>

@@ -1,22 +1,21 @@
 .city-search h1 {
-  font-size: 24px;
   margin: 0;
   font-weight: 400;
+  font-size: 24px;
 }
 
 .city-search input {
-  font-family: inherit;
-  height: 40px;
   display: inline-block;
-  border: none;
-  border-bottom: 1px solid white;
+  height: 40px;
   padding: 10px;
+  color: #fff;
+  font-weight: 700px;
   font-size: 30px;
+  font-family: inherit;
   text-transform: uppercase;
   background-color: transparent;
-  color: #fff;
-  font-size: 30px;
-  font-weight: 700px;
+  border: none;
+  border-bottom: 1px solid white;
 }
 
 .city-search input:focus,

@@ -3,26 +3,31 @@
 }
 
 html {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
 }
 
 body {
-  background-color: #ffffff;
   color: #fff;
+  background-color: #fff;
 }
 
 .app {
-  margin: 0 auto;
-  width: 660px;
-  height: 428px;
-  text-align: center;
-  margin-top: 250px;
   display: flex;
   flex-direction: column;
+  width: 660px;
+  height: 428px;
+  margin: 0 auto;
+  margin-top: 250px;
   padding-top: 31px;
-  padding-left: 58px;
   padding-right: 58px;
-  background: linear-gradient(180deg, #072F6A 0%, rgba(1, 33, 81, 0.869792) 0.01%, #2D81FF 100%);
+  padding-left: 58px;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    #072f6a 0%,
+    rgba(1, 33, 81, 0.869792) 0.01%,
+    #2d81ff 100%
+  );
   border-radius: 40px;
   box-shadow: 1px 5px 7px 1px #00000040;
 }
