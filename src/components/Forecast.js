@@ -13,8 +13,6 @@ const Forecast = (props) => {
   const { code } = props;
   const { isDay } = props;
 
-  // const { icon } = props;
-
   if (!temp || location.toLowerCase() !== responseLocation.toLowerCase()) {
     return (
       <div></div>
@@ -31,8 +29,9 @@ const Forecast = (props) => {
           </div>
         </div>
         <div className="flex properties">
-          <div className="properties__value">{wind}<span>mph</span></div>
-          <div className="properties__value">{pressure}<span>mm</span></div>
+          <div className="properties__value">{wind}<span>m/s</span></div>
+
+          <div className="properties__value">{pressure}<span>mm Hg</span></div>
           <div className="properties__value">{humidity}<span>%</span></div>
         </div>
       </div>

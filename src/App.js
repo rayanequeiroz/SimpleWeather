@@ -29,7 +29,6 @@ const App = () => {
   }, [])
 
   const debouncedLocation = useDebounce(location, 700);
-  // console.log(conversionToCorrect(location));
 
   const loadWeather = async () => {
     try {
@@ -38,8 +37,9 @@ const App = () => {
       setCountry(data.location.country);
       setTemp(data.current.temp_c);
       setCondition(`it's ${(data.current.condition.text).toLowerCase()}`);
-      setWind(data.current.wind_mph);
-      setPressure(data.current.pressure_mb);
+      setWind((data.current.wind_kph * 1000 / 3600).toFixed(1));
+      // Conversion from millibars to millimeters of mercury according to the formula
+      setPressure((data.current.pressure_mb * 0.750063755419211).toFixed());
       setHumidity(data.current.humidity);
       setCode(data.current.condition.code);
       setIsDay(data.current.is_day);
