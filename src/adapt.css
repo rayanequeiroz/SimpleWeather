@@ -5,13 +5,13 @@
   }
 
   html {
-    min-width: 536px;
+    min-width: 440px;
   }
 
   body {
-    min-width: 536px;
-    padding-right: 0;
-    padding-left: 0;
+    min-width: 440px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 
   .app {
