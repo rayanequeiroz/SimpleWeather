@@ -37,6 +37,7 @@ const App = () => {
       setCountry(data.location.country);
       setTemp(data.current.temp_c);
       setCondition(`it's ${(data.current.condition.text).toLowerCase()}`);
+      // Conversion from kph to meters per second
       setWind((data.current.wind_kph * 1000 / 3600).toFixed(1));
       // Conversion from millibars to millimeters of mercury according to the formula
       setPressure((data.current.pressure_mb * 0.750063755419211).toFixed());
