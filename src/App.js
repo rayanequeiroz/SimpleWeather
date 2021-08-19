@@ -64,7 +64,7 @@ const App = () => {
   }
 
   return (
-    <div className="app">
+    <div className="app flex-container">
       <CitySearch value={location} onChange={handleEvent} condition={condition} location={debouncedLocation} responseLocation={responseLocation} />
       <Forecast location={debouncedLocation} responseLocation={responseLocation} country={country} temp={temp} wind={wind} pressure={pressure} humidity={humidity} code={code} isDay={isDay} />
     </div>

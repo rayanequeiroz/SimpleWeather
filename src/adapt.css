@@ -1,22 +1,37 @@
 @media (max-width: 440px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
   html {
     min-width: 536px;
   }
 
   body {
     min-width: 536px;
-    padding-top: 100px;
     padding-right: 0;
     padding-left: 0;
   }
 
   .app {
-    box-sizing: content-box;
     width: 340px;
     height: 580px;
     margin-top: 150px;
     padding-top: 60px;
+    padding-right: 30px;
+    padding-left: 30px;
   }
+
+  /* .flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  } */
 
   .weather {
     grid-template-areas:
