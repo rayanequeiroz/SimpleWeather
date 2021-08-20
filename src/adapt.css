@@ -1,3 +1,9 @@
+@media (max-width: 830px) {
+  .app {
+    margin-top: 40px;
+  }
+}
+
 @media (max-width: 440px) {
   * {
     margin: 0;
@@ -43,7 +49,11 @@
 
   .icon {
     justify-self: center;
-    max-height: 150px;
+    max-height: 110px;
+  }
+
+  .temp h1 {
+    font-size: 90px;
   }
 
   .properties {
@@ -51,6 +61,13 @@
     gap: 30px;
     justify-self: center;
     margin-top: 20px;
+  }
+
+  .properties__value {
+    font-size: 24px;
+  }
+  .properties__value span {
+    font-size: 15px;
   }
 
   .city-search input {
@@ -62,16 +79,18 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 413px) {
   body {
     min-width: 320px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 
   .app {
-    width: 220px;
+    width: 240px;
     height: 450px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
   }
 
   .city-search h1 {
