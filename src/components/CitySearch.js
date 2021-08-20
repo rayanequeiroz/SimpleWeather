@@ -11,7 +11,7 @@ const CitySearch = (props) => {
       <AutosizeInput
         type="text"
         minWidth="70"
-        inputStyle={{ fontSize: 35, fontWeight: 600, display: 'block' }}
+        inputStyle={{ fontSize: 35, fontWeight: 600, display: 'block', maxWidth: 235 }}
         value={props.value}
         onChange={(e) => props.onChange(e)}
       />
