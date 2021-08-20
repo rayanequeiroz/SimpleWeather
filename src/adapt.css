@@ -71,6 +71,7 @@
   }
 
   .city-search input {
+    max-width: 270px;
     font-size: 25px !important;
   }
 
@@ -102,6 +103,7 @@
   }
 
   .city-search input {
+    max-width: 235px;
     font-size: 20px !important;
   }
 
