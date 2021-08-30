@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 const WeatherIcon = (props) => {
   const { code, isDay } = props;
@@ -18,4 +19,8 @@ const WeatherIcon = (props) => {
 
 }
 
-export default WeatherIcon;
+const mapStateToProps = (state) => {
+  const { code, isDay } = state;
+  return { code, isDay };
+}
+export default connect(mapStateToProps)(WeatherIcon);

@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import AutosizeInput from 'react-input-autosize';
 import WeatherCondition from './WeatherCondition';
 import './CitySearch.css';
-import { upperCase } from 'lodash';
+import { connect } from 'react-redux';
+import { searchCity } from '../redux/actions';
 
 const CitySearch = (props) => {
   return (
@@ -20,4 +21,12 @@ const CitySearch = (props) => {
   )
 }
 
-export default CitySearch;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onChange: (event) => {
+      dispatch(searchCity(event.target.value))
+    }
+  }
+}
+
+export default connect(null, mapDispatchToProps)(CitySearch);

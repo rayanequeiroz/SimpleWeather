@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './WeatherCondition.css';
+import { connect } from 'react-redux';
 
 const WeatherCondition = (props) => {
   const { location } = props;
@@ -19,5 +20,13 @@ const WeatherCondition = (props) => {
   }
 }
 
-export default WeatherCondition;
+const mapStateToProps = (state) => {
+  const { location } = state;
+  const { responseLocation } = state;
+  const { condition } = state;
+
+  return { location, responseLocation, condition };
+}
+
+export default connect(mapStateToProps)(WeatherCondition);
 

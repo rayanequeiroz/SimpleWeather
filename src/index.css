@@ -16,11 +16,13 @@ body {
 
 .app {
   width: 580px;
-  height: 430px;
+  height: 370px;
   margin: 0 auto;
-  margin-top: 250px;
+  margin-top: 200px;
+  margin-bottom: 100px;
   padding-top: 31px;
   padding-right: 58px;
+  padding-bottom: 31px;
   padding-left: 58px;
   text-align: center;
   background: linear-gradient(

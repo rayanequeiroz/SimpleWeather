@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
+import store from '../redux/store';
+
 import WeatherIcon from './WeatherIcon';
 import './Forecast.css';
 
@@ -37,4 +40,18 @@ const Forecast = (props) => {
   }
 };
 
-export default Forecast;
+const mapStateToProps = (state) =>{
+  const { location } = state;
+  const { responseLocation } = state;
+  const { country } = state;
+  const { temp } = state;
+  const { wind } = state;
+  const { pressure } = state;
+  const { humidity } = state;
+  const { code } = state;
+  const { isDay } = state;
+
+  return { location, responseLocation, country, temp, wind, pressure, humidity, code, isDay };
+}
+
+export default connect(mapStateToProps)(Forecast);
