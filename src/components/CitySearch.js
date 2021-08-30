@@ -13,12 +13,17 @@ const CitySearch = (props) => {
         type="text"
         minWidth="70"
         inputStyle={{ fontSize: 35, fontWeight: 600, display: 'block' }}
-        value={props.value}
+        value={props.location}
         onChange={(e) => props.onChange(e)}
       />
-      <WeatherCondition condition={props.condition} location={props.location} responseLocation={props.responseLocation} />
+      <WeatherCondition/>
     </div>
   )
+}
+
+const mapStateToProps = (state) => {
+  const { location } = state;
+  return { location };
 }
 
 const mapDispatchToProps = (dispatch) => {
@@ -29,4 +34,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(null, mapDispatchToProps)(CitySearch);
+export default connect(mapStateToProps, mapDispatchToProps)(CitySearch);

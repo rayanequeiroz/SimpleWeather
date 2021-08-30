@@ -72,14 +72,10 @@ const App = () => {
     }
   }, [debouncedLocation, memoLoadWeather]);
 
-  const handleEvent = (event) => {
-    dispatch(searchCity(event.target.value))
-  }
-
   return ( 
       <div className="app flex-container">
-        <CitySearch value={location} onChange={handleEvent} condition={condition} location={debouncedLocation} responseLocation={responseLocation} />
-        <Forecast location={debouncedLocation} responseLocation={responseLocation} country={country} temp={temp} wind={wind} pressure={pressure} humidity={humidity} code={code} isDay={isDay} />
+        <CitySearch/>
+        <Forecast/>
       </div>
   );
 }

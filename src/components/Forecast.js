@@ -25,7 +25,7 @@ const Forecast = (props) => {
   if (temp) {
     return (
       <div className="weather grid">
-        <WeatherIcon code={code} isDay={isDay} className="icon"></WeatherIcon>
+        <WeatherIcon></WeatherIcon>
         <div className="temp">
           <h1>{temp.toFixed()}</h1>
         </div>
