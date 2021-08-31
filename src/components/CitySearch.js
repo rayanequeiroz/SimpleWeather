@@ -3,7 +3,7 @@ import AutosizeInput from 'react-input-autosize';
 import WeatherCondition from './WeatherCondition';
 import './CitySearch.css';
 import { connect } from 'react-redux';
-import { searchCity } from '../redux/actions';
+import { setCity } from '../redux/actions';
 
 const CitySearch = (props) => {
   return (
@@ -29,7 +29,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onChange: (event) => {
-      dispatch(searchCity(event.target.value))
+      dispatch(setCity(event.target.value))
     }
   }
 }

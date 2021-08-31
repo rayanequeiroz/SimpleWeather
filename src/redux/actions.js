@@ -1,12 +1,12 @@
-export const SEARCH_CITY = 'SEARCH_CITY';
-export const LOAD_WEATHER = 'LOAD_WEATHER';
+export const SET_CITY = 'SET_CITY';
+export const UPDATE_WEATHER = 'UPDATE_WEATHER';
 
-export function searchCity(city) {
-  return { type: SEARCH_CITY, city }
+export function setCity(city) {
+  return { type: SET_CITY, city }
 }
 
 export function updateWeather(response) {
-  return { type: SEARCH_CITY, response }
+  return { type: UPDATE_WEATHER, payload: response }
 }
 
 export const initialState = {
@@ -24,23 +24,21 @@ export const initialState = {
 
 export function weatherApp(state = initialState, action) {
   switch (action.type) {
-    case SEARCH_CITY:
+    case SET_CITY:
       return Object.assign({}, state, {
         location: action.city
       })
-    case LOAD_WEATHER:
+    case UPDATE_WEATHER:
       return Object.assign({}, state, {
-        responseLocation: action.location.name,
-        country: action.location.country,
-        temp: action.current.temp_c,
-        condition: `it's ${(action.current.condition.text).toLowerCase()}`,
-        // Conversion from kph to meters per second
-        wind: (action.current.wind_kph * 1000 / 3600).toFixed(1),
-        // Conversion from millibars to millimeters of mercury according to the formula
-        pressure: (action.current.pressure_mb * 0.750063755419211).toFixed(),
-        humidity: action.current.humidity,
-        code: action.current.condition.code,
-        isDay: action.current.is_day
+        responseLocation: action.payload.location.name,
+        country: action.payload.location.country,
+        temp: action.payload.current.temp_c,
+        condition: `it's ${(action.payload.current.condition.text).toLowerCase()}`,
+        wind: action.payload.current.wind_kph,
+        pressure: action.payload.current.pressure_mb,
+        humidity: action.payload.current.humidity,
+        code: action.payload.current.condition.code,
+        isDay: action.payload.current.is_day
       })
     default:
       return state

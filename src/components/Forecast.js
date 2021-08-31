@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import store from '../redux/store';
 
 import WeatherIcon from './WeatherIcon';
 import './Forecast.css';
@@ -16,6 +15,10 @@ const Forecast = (props) => {
   const { code } = props;
   const { isDay } = props;
 
+  // Conversion from kph to m/s
+  const windToMPS = (wind * 1000 / 3600).toFixed(1);
+  // Conversion from millibars to millimeters of mercury according to the formula
+  const pressureToMmOfMercury = ( pressure * 0.750063755419211).toFixed();
   if (!temp || location.toLowerCase() !== responseLocation.toLowerCase()) {
     return (
       <div></div>
@@ -30,9 +33,9 @@ const Forecast = (props) => {
           <h1>{temp.toFixed()}</h1>
         </div>
         <div className="flex properties">
-          <div className="properties__value">{wind}<span>m/s</span></div>
+          <div className="properties__value">{windToMPS}<span>m/s</span></div>
 
-          <div className="properties__value">{pressure}<span>mm Hg</span></div>
+          <div className="properties__value">{pressureToMmOfMercury}<span>mm Hg</span></div>
           <div className="properties__value">{humidity}<span>%</span></div>
         </div>
       </div>
@@ -40,7 +43,7 @@ const Forecast = (props) => {
   }
 };
 
-const mapStateToProps = (state) =>{
+const mapStateToProps = (state) => {
   const { location } = state;
   const { responseLocation } = state;
   const { country } = state;
