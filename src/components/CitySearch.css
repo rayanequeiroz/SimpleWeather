@@ -1,3 +1,7 @@
+.city-search {
+  position: relative;
+}
+
 .city-search h1 {
   margin: 0;
   font-weight: 400;
@@ -22,4 +26,10 @@
 .city-search input:focus,
 .city-search input:hover {
   outline: none !important;
+}
+
+.favorite-button {
+  position: absolute;
+  top: 10px;
+  right: -10px;
 }
