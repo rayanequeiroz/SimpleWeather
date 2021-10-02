@@ -43,18 +43,16 @@ const Forecast = (props) => {
   }
 };
 
-const mapStateToProps = (state) => {
-  const { location } = state;
-  const { responseLocation } = state;
-  const { country } = state;
-  const { temp } = state;
-  const { wind } = state;
-  const { pressure } = state;
-  const { humidity } = state;
-  const { code } = state;
-  const { isDay } = state;
-
-  return { location, responseLocation, country, temp, wind, pressure, humidity, code, isDay };
-}
+const mapStateToProps = (state) => ({
+  location: state.location,
+  responseLocation: state.responseLocation,
+  country: state.country,
+  temp: state.temp,
+  wind: state.wind,
+  pressure: state.pressure,
+  humidity: state.humidity,
+  code: state.code,
+  isDay: state.isDay
+});
 
 export default connect(mapStateToProps)(Forecast);

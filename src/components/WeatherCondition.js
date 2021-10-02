@@ -9,7 +9,7 @@ const WeatherCondition = (props) => {
 
   if (!condition || location.toLowerCase() !== responseLocation.toLowerCase()) {
     return (
-      <span></span>
+      <span/>
     );
   }
 
@@ -20,13 +20,11 @@ const WeatherCondition = (props) => {
   }
 }
 
-const mapStateToProps = (state) => {
-  const { location } = state;
-  const { responseLocation } = state;
-  const { condition } = state;
-
-  return { location, responseLocation, condition };
-}
+const mapStateToProps = (state) => ({
+  location: state.location,
+  responseLocation: state.responseLocation,
+  condition: state.condition,
+})
 
 export default connect(mapStateToProps)(WeatherCondition);
 

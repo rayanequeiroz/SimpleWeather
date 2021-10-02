@@ -9,7 +9,7 @@
 
 .temp {
   grid-area: temp;
-  justify-self: flex-start;
+  justify-self: center;
 }
 
 .temp h1 {
