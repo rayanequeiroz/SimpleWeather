@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 import WeatherIcon from './WeatherIcon';
@@ -12,8 +12,6 @@ const Forecast = (props) => {
   const { wind } = props;
   const { pressure } = props;
   const { humidity } = props;
-  const { code } = props;
-  const { isDay } = props;
 
   // Conversion from kph to m/s
   const windToMPS = (wind * 1000 / 3600).toFixed(1);

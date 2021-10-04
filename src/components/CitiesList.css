@@ -1,0 +1,39 @@
+.city {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  text-transform: capitalize;
+  width: 500px;
+  height: 120px;
+  color: #2d81ff;
+  border: 2px solid #5f9fff;
+  box-shadow: 0 4px 4px 0 #00000026;
+  border-radius: 20px;
+    flex-shrink: 0;
+}
+
+.cities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  overflow-x: auto;
+  height: 700px;
+    width: 700px;
+    margin: 0 auto;
+    margin-top: 165px;
+}
+/* для Chrome/Edge/Safari */
+.cities-list::-webkit-scrollbar {
+    height: 28px;
+    width: 28px;
+}
+.cities-list::-webkit-scrollbar-track {
+    background: #F9FBFF;
+    border-radius: 10px;
+}
+.cities-list::-webkit-scrollbar-thumb {
+    background-color: #6BA6FF;
+    border-radius: 10px;
+}
