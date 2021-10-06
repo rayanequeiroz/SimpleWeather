@@ -1,33 +1,38 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import AutosizeInput from "react-input-autosize";
 import { connect } from "react-redux";
 import "./CitySearch.css";
 import WeatherCondition from "./WeatherCondition";
-import {addToFavorites} from "../store/favoriteCitiesReducer";
+import {addCity, addToFavorites, removeCity, removeFromFavorites} from "../store/favoriteCitiesReducer";
 import {setCity} from "../store/weatherReducer";
+
 
 const CitySearch = (props) => {
   if (!localStorage.getItem("cities")) localStorage.setItem("cities", "[]");
+    const [isFavorite, setFavorite] = useState(props.favoriteCities.includes(props.location))
+    console.log(isFavorite);
+    console.log(props.favoriteCities);
 
+    useEffect(() => {
+        return () => {
+           setFavorite(props.favoriteCities.includes(props.location));
+        };
+    }, [props.location]);
   return (
     <div className="city-search">
       <input
-        // defaultChecked={isFavorite}
+        defaultChecked={isFavorite}
         className="favorite-button"
         type="checkbox"
-        // onChange={() => {
-        //   if (!isFavorite && !props.favoriteCities.includes(props.location.toLowerCase())) {
-        //       addToFavorites(cities.push(props.location.toLowerCase));
-        //       console.log(cities);
-        //   }
-        //   if (!isFavorite && props.favoriteCities.includes(props.location.toLowerCase())) {
-        //     const index = props.favoriteCities.indexOf(props.location.toLowerCase());
-        //     if (index > -1) {
-        //         cities.splice(index, 1);
-        //         addToFavorites(cities);
-        //     }
-        //   }
-        // }}
+        onChange={() => {
+            if(!isFavorite) {
+              props.addToFavorites(props.location)
+                setFavorite(!isFavorite);
+            } else {
+                props.removeFromFavorites(props.location)
+                setFavorite(!isFavorite);
+            }
+        }}
       />
       <h1>Right now in</h1>
       <AutosizeInput
@@ -44,13 +49,19 @@ const CitySearch = (props) => {
 
 const mapStateToProps = (state) => ({
   location: state.weatherData.location,
-  // favoriteCities: state.favoriteCities
+  favoriteCities: state.cities.arrOfCities
 });
 
 const mapDispatchToProps = (dispatch) => ({
   onChange: (event) => {
     dispatch(setCity(event.target.value));
   },
+    addToFavorites: (city) => {
+        dispatch(addToFavorites(city));
+    },
+    removeFromFavorites: (city) => {
+        dispatch(removeFromFavorites(city));
+    }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CitySearch);

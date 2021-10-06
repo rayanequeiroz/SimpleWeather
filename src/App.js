@@ -5,8 +5,8 @@ import CitiesList from './components/CitiesList';
 import WeatherToday from './components/WeatherToday';
 import useDebounce from './functions/useDebounce';
 import { history } from './historyVar';
-import store, { fetchWeather } from './store/store';
-import {setCity} from "./store/weatherReducer";
+import store from './store/store';
+import {fetchWeather, setCity} from "./store/weatherReducer";
 
 
 const App = (props) => {

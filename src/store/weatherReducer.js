@@ -1,3 +1,6 @@
+import loadData from "../functions/loadData";
+import store from "./store";
+
 export const SET_CITY = "SET_CITY";
 export const UPDATE_WEATHER = "UPDATE_WEATHER";
 
@@ -19,8 +22,7 @@ export const initialState = {
     pressure: "",
     humidity: "",
     code: "",
-    isDay: "",
-    favoriteCities: [],
+    isDay: ""
 };
 
 export function weatherReducer(state = initialState, action) {
@@ -42,5 +44,15 @@ export function weatherReducer(state = initialState, action) {
             };
         default:
             return state;
+    }
+}
+
+export const fetchWeather = (debouncedLocation) => async (dispatch) => {
+    try {
+        const data = await (loadData(debouncedLocation));
+        store.dispatch(updateWeather(data));
+        localStorage.setItem('location', data.location.name);
+    } catch (e) {
+        console.error(e);
     }
 }
