@@ -1,12 +1,18 @@
-import { createStore, applyMiddleware } from 'redux';
-import { weatherApp, updateWeather } from './actions';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension';
 import loadData from '../functions/loadData';
+import {updateWeather, weatherReducer} from "./weatherReducer";
+import {favoriteCitiesReducer} from "./favoriteCitiesReducer";
 
 const composedEnhancer = composeWithDevTools(applyMiddleware(thunkMiddleware))
 
-let store = createStore(weatherApp, composedEnhancer);
+const rootReducer = combineReducers( {
+  cities: favoriteCitiesReducer,
+  weatherData: weatherReducer
+})
+
+let store = createStore(rootReducer, composedEnhancer);
 
 export const fetchWeather = (debouncedLocation) => async (dispatch) => {
   try {
@@ -17,5 +23,4 @@ export const fetchWeather = (debouncedLocation) => async (dispatch) => {
     console.error(e);
   }
 }
-
 export default store;

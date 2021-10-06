@@ -5,17 +5,14 @@ import CitiesList from './components/CitiesList';
 import WeatherToday from './components/WeatherToday';
 import useDebounce from './functions/useDebounce';
 import { history } from './historyVar';
-import { setCity } from './redux/actions';
-import store, { fetchWeather } from './redux/store';
+import store, { fetchWeather } from './store/store';
+import {setCity} from "./store/weatherReducer";
 
 
 const App = (props) => {
   useEffect(() => {
     if (localStorage.location && props.location === '') {
       store.dispatch(setCity(localStorage.getItem('location')));
-      // return () => {
-      //   location.onChange(localStorage.setItem('location', location));
-      // };
     }
   }, []);
 
@@ -38,10 +35,13 @@ const App = (props) => {
   return (
     <Router history={history}>
       <Switch>
-        <Route path="/" exact>
+        <Route exact path="/weather-by-evergreen">
           <WeatherToday />
         </Route>
-        <Route path="/cities" exact>
+        <Route exact path="/city/:name">
+          <WeatherToday />
+        </Route>
+        <Route exact path="/cities">
           <CitiesList />
         </Route>
       </Switch>
@@ -50,8 +50,7 @@ const App = (props) => {
 };
 
 
-const mapStateToProps = (state) => {
-  const { location } = state;
-  return { location };
-};
+const mapStateToProps = (state) => ({
+  location: state.weatherData.location
+});
 export default connect(mapStateToProps)(App);

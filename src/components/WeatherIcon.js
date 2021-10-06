@@ -2,14 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const WeatherIcon = (props) => {
-  const { code, isDay } = props;
   let timeOfDay = "day";
-
-  if (!isDay) {
+  if (!props.isDay) {
     timeOfDay = "night";
   }
 
-  const weatherSrc = `/assets/icons/${timeOfDay}/${code}.svg`;
+  const weatherSrc = `/assets/icons/${timeOfDay}/${props.code}.svg`;
 
   return (
     <div className="icon">
@@ -19,8 +17,8 @@ const WeatherIcon = (props) => {
 
 }
 
-const mapStateToProps = (state) => {
-  const { code, isDay } = state;
-  return { code, isDay };
-}
+const mapStateToProps = (state) => ({
+  code: state.weatherData.code,
+  isDay: state.weatherData.isDay
+})
 export default connect(mapStateToProps)(WeatherIcon);

@@ -26,7 +26,7 @@ const Forecast = (props) => {
   if (temp) {
     return (
       <div className="weather grid">
-        <WeatherIcon></WeatherIcon>
+        <WeatherIcon />
         <div className="temp">
           <h1>{temp.toFixed()}</h1>
         </div>
@@ -42,15 +42,15 @@ const Forecast = (props) => {
 };
 
 const mapStateToProps = (state) => ({
-  location: state.location,
-  responseLocation: state.responseLocation,
-  country: state.country,
-  temp: state.temp,
-  wind: state.wind,
-  pressure: state.pressure,
-  humidity: state.humidity,
-  code: state.code,
-  isDay: state.isDay
+  location: state.weatherData.location,
+  responseLocation: state.weatherData.responseLocation,
+  country: state.weatherData.country,
+  temp: state.weatherData.temp,
+  wind: state.weatherData.wind,
+  pressure: state.weatherData.pressure,
+  humidity: state.weatherData.humidity,
+  code: state.weatherData.code,
+  isDay: state.weatherData.isDay
 });
 
 export default connect(mapStateToProps)(Forecast);

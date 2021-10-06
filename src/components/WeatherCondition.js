@@ -3,27 +3,23 @@ import './WeatherCondition.css';
 import { connect } from 'react-redux';
 
 const WeatherCondition = (props) => {
-  const { location } = props;
-  const { responseLocation } = props;
-  const { condition } = props;
-
-  if (!condition || location.toLowerCase() !== responseLocation.toLowerCase()) {
+  if (!props.condition || props.location.toLowerCase() !== props.responseLocation.toLowerCase()) {
     return (
       <span/>
     );
   }
 
-  if (condition) {
+  if (props.condition) {
     return (
-      <div className="condition">{condition}</div>
+      <div className="condition">{props.condition}</div>
     );
   }
 }
 
 const mapStateToProps = (state) => ({
-  location: state.location,
-  responseLocation: state.responseLocation,
-  condition: state.condition,
+  location: state.weatherData.location,
+  responseLocation: state.weatherData.responseLocation,
+  condition: state.weatherData.condition,
 })
 
 export default connect(mapStateToProps)(WeatherCondition);

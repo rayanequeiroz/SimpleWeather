@@ -37,3 +37,10 @@
     background-color: #6BA6FF;
     border-radius: 10px;
 }
+
+.empty-list {
+    margin-top: 180px;
+    text-align: center;
+    font-size: 40px;
+    color: #2d81ff;
+}
