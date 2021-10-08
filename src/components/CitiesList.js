@@ -2,8 +2,7 @@ import React from "react";
 import "../styles/CitiesList.css";
 
 const CitiesList = () => {
-    const cities = localStorage.getItem("cities");
-    console.log(cities)
+    const cities = JSON.parse(localStorage.getItem("cities"));
   if(cities.length > 0) {
       return (
           <div className="cities-list">

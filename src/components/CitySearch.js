@@ -12,18 +12,14 @@ import MyCheckbox from "./UI/checkbox/MyCheckbox";
 
 
 const CitySearch = (props) => {
-  if (!localStorage.getItem("cities")) localStorage.setItem("cities", "[]");
     const [isFavorite, setFavorite] = useState(props.favoriteCities.includes(props.location))
-    console.log(props.favoriteCities);
-    console.log(props.favoriteCities.includes(props.location))
-    console.log(isFavorite);
 
     useEffect(() => {
         setFavorite(props.favoriteCities.includes(props.location));
     }, [props.location]);
 
     useEffect(() => {
-        localStorage.setItem("cities", props.favoriteCities)
+        localStorage.setItem("cities", JSON.stringify(props.favoriteCities))
     }, [props.favoriteCities]);
 
   return (
@@ -33,11 +29,9 @@ const CitySearch = (props) => {
         onChange={() => {
             if(!isFavorite) {
               props.addToFavorites(props.location)
-                localStorage.setItem("cities", props.favoriteCities);
                 setFavorite(!isFavorite);
             } else {
                 props.removeFromFavorites(props.location)
-                localStorage.setItem("cities", props.favoriteCities);
                 setFavorite(!isFavorite);
             }
         }}
