@@ -11,7 +11,7 @@ import {fetchWeather, setCity} from "./store/weatherReducer";
 
 const App = (props) => {
   useEffect(() => {
-    if (localStorage.location && props.location === '') {
+    if (localStorage.getItem('location') && props.location === '') {
       store.dispatch(setCity(localStorage.getItem('location')));
     }
   }, []);
@@ -51,6 +51,7 @@ const App = (props) => {
 
 
 const mapStateToProps = (state) => ({
-  location: state.weatherData.location
+  location: state.weatherData.location,
+  favoriteCities: state.cities.arrOfCities
 });
 export default connect(mapStateToProps)(App);

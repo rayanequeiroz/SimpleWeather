@@ -2,7 +2,6 @@ import store from "./store";
 
 export const ADD_TO_FAVORITES = "ADD_TO_FAVORITES";
 export const REMOVE_FROM_FAVORITES = "REMOVE_FROM_FAVORITES";
-
 export function addCity(city) {
   return { type: ADD_TO_FAVORITES, payload: city };
 }
@@ -10,7 +9,6 @@ export function addCity(city) {
 export function removeCity(city) {
   return { type: REMOVE_FROM_FAVORITES, payload: city };
 }
-
 export const citiesState = {
   arrOfCities: [],
 };
@@ -33,12 +31,8 @@ export function favoriteCitiesReducer(state = citiesState, action) {
 
 export const addToFavorites = (city) => (dispatch) => {
     store.dispatch(addCity(city));
-    // const cities = localStorage.getItem('cities');
-    // localStorage.setItem('cities', cities.push(city));
 };
 export const removeFromFavorites = (city) => (dispatch) => {
     store.dispatch(removeCity(city));
-    // const cities = localStorage.getItem('cities');
-    // const newCities = cities.filter(favCity => favCity !== city)
-    // localStorage.setItem('cities', newCities)
+
 };

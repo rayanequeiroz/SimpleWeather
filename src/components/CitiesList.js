@@ -1,12 +1,16 @@
 import React from "react";
-import "./CitiesList.css";
-import { connect } from "react-redux";
+import "../styles/CitiesList.css";
 
-const CitiesList = (props) => {
-  if(props.cities.length > 0) {
-      const wrappedCities = props.cities.map(city => <div className="city">{city}</div>);
+const CitiesList = () => {
+    const cities = localStorage.getItem("cities");
+    console.log(cities)
+  if(cities.length > 0) {
       return (
-          <div className="cities-list">{wrappedCities}</div>
+          <div className="cities-list">
+              {cities.map(city =>
+                  <div className="city">{city}</div>
+              )}
+          </div>
       )
   } else {
       return (
@@ -17,9 +21,4 @@ const CitiesList = (props) => {
   }
 
 };
-
-const mapStateToProps = (state) => ({
-  cities: state.cities.arrOfCities,
-});
-
-export default connect(mapStateToProps)(CitiesList);
+export default CitiesList;

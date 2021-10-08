@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import WeatherIcon from './WeatherIcon';
-import './Forecast.css';
+import '../styles/Forecast.css';
 
 const Forecast = (props) => {
   // Conversion from kph to m/s

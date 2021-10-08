@@ -1,5 +1,5 @@
 import React from 'react';
-import './WeatherCondition.css';
+import '../styles/WeatherCondition.css';
 import { connect } from 'react-redux';
 
 const WeatherCondition = (props) => {

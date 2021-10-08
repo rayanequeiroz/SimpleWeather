@@ -28,7 +28,7 @@ export const initialState = {
 export function weatherReducer(state = initialState, action) {
     switch (action.type) {
         case SET_CITY:
-            return { ...state, location: action.payload };
+            return { ...state, location: action.payload.toLowerCase() };
         case UPDATE_WEATHER:
             return {
                 ...state,

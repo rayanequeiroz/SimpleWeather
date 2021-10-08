@@ -5,7 +5,7 @@ import store from './store/store'
 
 import App from './App';
 import './index.css';
-import './adaptive.css'
+import './styles/adaptiveApp.css'
 
 const rootElement = document.getElementById('root')
 ReactDOM.render(

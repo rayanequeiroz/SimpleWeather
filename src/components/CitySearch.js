@@ -1,35 +1,43 @@
 import React, {useEffect, useState} from "react";
 import AutosizeInput from "react-input-autosize";
 import { connect } from "react-redux";
-import "./CitySearch.css";
+import "../styles/CitySearch.css";
 import WeatherCondition from "./WeatherCondition";
-import {addCity, addToFavorites, removeCity, removeFromFavorites} from "../store/favoriteCitiesReducer";
+import {
+    addToFavorites,
+    removeFromFavorites
+} from "../store/favoriteCitiesReducer";
 import {setCity} from "../store/weatherReducer";
+import MyCheckbox from "./UI/checkbox/MyCheckbox";
 
 
 const CitySearch = (props) => {
   if (!localStorage.getItem("cities")) localStorage.setItem("cities", "[]");
     const [isFavorite, setFavorite] = useState(props.favoriteCities.includes(props.location))
-    console.log(isFavorite);
     console.log(props.favoriteCities);
+    console.log(props.favoriteCities.includes(props.location))
+    console.log(isFavorite);
 
     useEffect(() => {
-        return () => {
-           setFavorite(props.favoriteCities.includes(props.location));
-        };
+        setFavorite(props.favoriteCities.includes(props.location));
     }, [props.location]);
+
+    useEffect(() => {
+        localStorage.setItem("cities", props.favoriteCities)
+    }, [props.favoriteCities]);
+
   return (
     <div className="city-search">
-      <input
-        defaultChecked={isFavorite}
-        className="favorite-button"
-        type="checkbox"
+      <MyCheckbox
+          isFavorite={isFavorite}
         onChange={() => {
             if(!isFavorite) {
               props.addToFavorites(props.location)
+                localStorage.setItem("cities", props.favoriteCities);
                 setFavorite(!isFavorite);
             } else {
                 props.removeFromFavorites(props.location)
+                localStorage.setItem("cities", props.favoriteCities);
                 setFavorite(!isFavorite);
             }
         }}
