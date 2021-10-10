@@ -11,7 +11,7 @@ const WeatherIcon = (props) => {
 
   return (
     <div className="icon">
-      <object data={process.env.PUBLIC_URL + weatherSrc} type="image/svg+xml" className="icon" alt="Icon of Weather"/>
+      <object data={process.env.PUBLIC_URL + weatherSrc} type="image/svg+xml" className="icon"/>
     </div>
   )
 
