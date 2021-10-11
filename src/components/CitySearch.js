@@ -22,12 +22,15 @@ const CitySearch = (props) => {
   }, [props.location]);
 
   useEffect(() => {
-      if(props.location.length && props.location === props.responseLocation.toLowerCase()) {
-          setDisabled(false);
-      } else {
-          setDisabled(true);
-      }
-  }, [props.location]);
+    if (
+      props.location.length &&
+      props.location === props.responseLocation.toLowerCase()
+    ) {
+      setDisabled(false);
+    } else {
+      setDisabled(true);
+    }
+  }, [props.location, props.responseLocation]);
 
   useEffect(() => {
     localStorage.setItem("cities", JSON.stringify(props.favoriteCities));
@@ -73,7 +76,7 @@ const CitySearch = (props) => {
 const mapStateToProps = (state) => ({
   location: state.weatherData.location,
   favoriteCities: state.cities.arrOfCities,
-    responseLocation: state.weatherData.responseLocation,
+  responseLocation: state.weatherData.responseLocation,
 });
 
 const mapDispatchToProps = (dispatch) => ({
