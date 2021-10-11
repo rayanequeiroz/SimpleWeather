@@ -1,4 +1,4 @@
-import loadData from "../functions/loadData";
+import fetchData from "../functions/fetchData";
 import store from "./store";
 
 export const SET_CITY = "SET_CITY";
@@ -49,7 +49,7 @@ export function weatherReducer(state = initialState, action) {
 
 export const fetchWeather = (debouncedLocation) => async (dispatch) => {
     try {
-        const data = await (loadData(debouncedLocation));
+        const data = await (fetchData(debouncedLocation));
         store.dispatch(updateWeather(data));
         localStorage.setItem('location', data.location.name);
     } catch (e) {
