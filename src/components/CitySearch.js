@@ -8,7 +8,7 @@ import {
     removeFromFavorites
 } from "../store/favoriteCitiesReducer";
 import {setCity} from "../store/weatherReducer";
-import AddToFavoriteButton from "./UI/checkbox/AddToFavoriteButton";
+import FavoriteButton from "./UI/checkbox/FavoriteButton";
 
 
 const CitySearch = (props) => {
@@ -24,7 +24,7 @@ const CitySearch = (props) => {
 
   return (
     <div className="city-search">
-      <AddToFavoriteButton
+      <FavoriteButton
           isFavorite={isFavorite}
         onClick={() => {
             if(!isFavorite) {

@@ -7,6 +7,8 @@ import App from './App';
 import './index.css';
 import './styles/adaptiveApp.css'
 import {getCitiesFromLocaleStorage} from "./store/favoriteCitiesReducer";
+import {createTheme} from "@mui/material";
+import {ThemeProvider} from "@emotion/react";
 
 if(!localStorage.getItem('cities')) {
     localStorage.setItem('cities', '[]');
@@ -16,10 +18,25 @@ if(!localStorage.getItem('cities')) {
     store.dispatch(getCitiesFromLocaleStorage(cities));
 }
 
+const theme = createTheme({
+    palette: {
+        primary: {
+            main: '#ffffff',
+            darker: '#ffffff'
+        },
+        secondary: {
+            main: '#ffffff',
+            darker: '#ffffff'
+        }
+    }
+});
+
 const rootElement = document.getElementById('root')
 ReactDOM.render(
   <Provider store={store}>
+      <ThemeProvider theme={theme}>
     <App />
+      </ThemeProvider>
   </Provider>,
   rootElement
 )
