@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/weather-by-evergreen/static/css/main.8966e44f.chunk.css",
-    "main.js": "/weather-by-evergreen/static/js/main.21484472.chunk.js",
-    "main.js.map": "/weather-by-evergreen/static/js/main.21484472.chunk.js.map",
+    "main.js": "/weather-by-evergreen/static/js/main.e64e66fa.chunk.js",
+    "main.js.map": "/weather-by-evergreen/static/js/main.e64e66fa.chunk.js.map",
     "runtime-main.js": "/weather-by-evergreen/static/js/runtime-main.afc69c30.js",
     "runtime-main.js.map": "/weather-by-evergreen/static/js/runtime-main.afc69c30.js.map",
     "static/js/2.6771c37b.chunk.js": "/weather-by-evergreen/static/js/2.6771c37b.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.afc69c30.js",
     "static/js/2.6771c37b.chunk.js",
     "static/css/main.8966e44f.chunk.css",
-    "static/js/main.21484472.chunk.js"
+    "static/js/main.e64e66fa.chunk.js"
   ]
 }
