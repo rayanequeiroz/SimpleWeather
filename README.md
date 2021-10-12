@@ -1,8 +1,8 @@
 # Weather app made as a pet project
 ## This app is still in development
 
-Hello! This is my first SPA using a combination of React and Redux.
-It implements the loading of data from API of [weatherapi.com](https://www.weatherapi.com/)
+Hello! This is my first SPA using a combination of React and Redux.\
+It implements the loading of data from API of [weatherapi.com](https://www.weatherapi.com/)\
 I also used the [MUI library](https://mui.com/) for buttons and a [react-router](https://reactrouter.com/) to navigate through the pages.
 
 
