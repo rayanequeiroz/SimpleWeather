@@ -5,7 +5,7 @@ import FavoriteCityButton from "../components/FavoriteCityButton";
 
 const WeatherToday = () => {
   return (
-    <div className="app flex-container">
+    <div className="App flex-container">
       <FavoriteCityButton />
       <CitySearch />
       <Forecast />

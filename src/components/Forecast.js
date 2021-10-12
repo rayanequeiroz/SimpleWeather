@@ -19,10 +19,10 @@ const Forecast = (props) => {
     return (
       <div className="weather grid">
         <WeatherIcon />
-        <div className="temp">
+        <div className="weather__temp">
           <h1>{props.temp.toFixed()}</h1>
         </div>
-        <div className="flex properties">
+        <div className="flex weather__properties">
           <div className="properties__value">{windToMPS}<span>m/s</span></div>
 
           <div className="properties__value">{pressureToMmOfMercury}<span>mm Hg</span></div>

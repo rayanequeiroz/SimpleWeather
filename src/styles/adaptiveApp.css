@@ -1,5 +1,5 @@
 @media (max-width: 830px) {
-  .app {
+  .App {
     margin-top: 40px;
   }
 }
@@ -17,7 +17,7 @@
     padding-left: 0;
   }
 
-  .app {
+  .App {
     width: 294px;
     height: 520px;
     margin-top: 80px;
@@ -47,7 +47,7 @@
     font-size: 90px;
   }
 
-  .properties {
+  .weather__properties {
     flex-direction: row;
     gap: 30px;
     justify-self: center;
@@ -78,7 +78,7 @@
     padding-left: 10px;
   }
 
-  .app {
+  .App {
     width: 260px;
     height: 450px;
     padding-right: 20px;
@@ -102,11 +102,11 @@
     max-height: 90px;
   }
 
-  .temp h1 {
+  .weather__temp h1 {
     font-size: 70px;
   }
 
-  .properties {
+  .weather__properties {
     gap: 15px;
   }
 

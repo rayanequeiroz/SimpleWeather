@@ -7,12 +7,12 @@
   column-gap: 40px;
 }
 
-.temp {
+.weather__temp {
   grid-area: temp;
   justify-self: center;
 }
 
-.temp h1 {
+.weather__temp h1 {
   margin: 0;
   font-weight: 300;
   font-size: 120px;
@@ -34,7 +34,7 @@
   max-height: 124px;
 }
 
-.properties {
+.weather__properties {
   flex-direction: column;
   grid-area: properties;
   align-items: flex-start;
