@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Weather app made as a pet project
+## This app is still in development
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hello! This is my first SPA using a combination of React and Redux.
+It implements the loading of data from API of [weatherapi.com](https://www.weatherapi.com/)
+I also used the [MUI library](https://mui.com/) for buttons and a [react-router](https://reactrouter.com/) to navigate through the pages.
+
 
 ## Available Scripts
 
@@ -10,9 +14,4 @@ In the project directory, you can run:
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
