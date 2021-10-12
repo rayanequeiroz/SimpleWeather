@@ -3,63 +3,11 @@ import AutosizeInput from "react-input-autosize";
 import { connect } from "react-redux";
 import "../styles/CitySearch.css";
 import WeatherCondition from "./WeatherCondition";
-import {
-  addToFavorites,
-  removeFromFavorites,
-} from "../store/favoriteCitiesReducer";
 import { setCity } from "../store/weatherReducer";
-import { Favorite, FavoriteBorder } from "@mui/icons-material";
-import { Checkbox } from "@mui/material";
 
 const CitySearch = (props) => {
-  const [isFavorite, setFavorite] = useState(
-    props.favoriteCities.includes(props.location)
-  );
-  const [isDisabled, setDisabled] = useState(false);
-
-  useEffect(() => {
-    setFavorite(props.favoriteCities.includes(props.location));
-  }, [props.location]);
-
-  useEffect(() => {
-    if (
-      props.location.length &&
-      props.location === props.responseLocation.toLowerCase()
-    ) {
-      setDisabled(false);
-    } else {
-      setDisabled(true);
-    }
-  }, [props.location, props.responseLocation]);
-
-  useEffect(() => {
-    localStorage.setItem("cities", JSON.stringify(props.favoriteCities));
-  }, [props.favoriteCities]);
-
   return (
     <div className="city-search">
-      <Checkbox
-        onClick={() => {
-          if (!isFavorite) {
-            props.addToFavorites(props.location);
-            setFavorite(!isFavorite);
-          } else {
-            props.removeFromFavorites(props.location);
-            setFavorite(!isFavorite);
-          }
-        }}
-        disabled={isDisabled}
-        checked={isFavorite}
-        icon={<FavoriteBorder />}
-        checkedIcon={<Favorite />}
-        size="large"
-        sx={{
-          color: "white",
-          "&.Mui-checked": {
-            color: "white",
-          },
-        }}
-      />
       <h1>Right now in</h1>
       <AutosizeInput
         type="text"
@@ -74,21 +22,13 @@ const CitySearch = (props) => {
 };
 
 const mapStateToProps = (state) => ({
-  location: state.weatherData.location,
-  favoriteCities: state.cities.arrOfCities,
-  responseLocation: state.weatherData.responseLocation,
+  location: state.weatherData.location
 });
 
 const mapDispatchToProps = (dispatch) => ({
   onChange: (event) => {
     dispatch(setCity(event.target.value));
-  },
-  addToFavorites: (city) => {
-    dispatch(addToFavorites(city));
-  },
-  removeFromFavorites: (city) => {
-    dispatch(removeFromFavorites(city));
-  },
+  }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CitySearch);

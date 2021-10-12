@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Route, Router, Switch } from 'react-router-dom';
-import CitiesList from './components/CitiesList';
-import WeatherToday from './components/WeatherToday';
+import CitiesList from './pages/CitiesList';
+import WeatherToday from './pages/WeatherToday';
 import useDebounce from './functions/useDebounce';
 import { history } from './historyVar';
 import store from './store/store';
