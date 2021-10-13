@@ -17,13 +17,8 @@ body {
 .App {
   width: 580px;
   height: 370px;
-  margin: 0 auto;
-  margin-top: 200px;
-  margin-bottom: 100px;
-  padding-top: 31px;
-  padding-right: 58px;
-  padding-bottom: 31px;
-  padding-left: 58px;
+  margin: 200px auto 100px auto;
+  padding: 31px 58px;
   text-align: center;
   background: linear-gradient(
     180deg,
@@ -33,4 +28,12 @@ body {
   );
   border-radius: 40px;
   box-shadow: 1px 5px 7px 1px #00000040;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
 }

@@ -1,0 +1,30 @@
+.Cities {
+    width: 580px;
+    height: 370px;
+    margin: 200px auto 100px auto;
+    padding: 31px 58px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #2D81FF;
+    border-radius: 40px;
+    box-shadow: 0 4px 5px 0 #00000026;
+    color: #2d81ff;
+    display: flex;
+    gap: 25px;
+}
+
+.Cities__container {
+    width: 341px;
+    text-align: center;
+}
+
+.Cities-header {
+    font-size: 23px;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.Cities__settings {
+    margin: 55px auto 0;
+    width: 100%;
+}
