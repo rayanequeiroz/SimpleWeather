@@ -20,14 +20,6 @@
   line-height: 1em;
 }
 
-.grid {
-  display: grid;
-}
-
-.flex {
-  display: flex;
-}
-
 .icon {
   grid-area: icon;
   justify-self: flex-end;

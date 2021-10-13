@@ -36,13 +36,10 @@ const Forecast = (props) => {
 const mapStateToProps = (state) => ({
   location: state.weatherData.location,
   responseLocation: state.weatherData.responseLocation,
-  country: state.weatherData.country,
   temp: state.weatherData.temp,
   wind: state.weatherData.wind,
   pressure: state.weatherData.pressure,
   humidity: state.weatherData.humidity,
-  code: state.weatherData.code,
-  isDay: state.weatherData.isDay
 });
 
 export default connect(mapStateToProps)(Forecast);
