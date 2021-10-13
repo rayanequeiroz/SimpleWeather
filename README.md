@@ -1,17 +1,23 @@
-# Weather app made as a pet project
-## This app is still in development
+# Weather app made as a pet project(still in development)
 
 Hello! This is my first SPA using a combination of React and Redux.\
 It implements the loading of data from API of [weatherapi.com](https://www.weatherapi.com/)\
 I also used the [MUI library](https://mui.com/) for buttons and a [react-router](https://reactrouter.com/) to navigate through the pages.
 
 
-## Available Scripts
+## How to use
 
-In the project directory, you can run:
+1. Clone this repository.
+```
+git clone https://github.com/keyofevergreen/weather-by-evergreen.git
+```
+2. Go to the cloned directory (e.g. cd weather-by-evergreen).
+3. Run `npm install`.
+4. Run `npm start`. The command will start a local live server. Open (http://localhost:3030/weather-by-evergreen) in your browser, if the tab doesn't open automatically
+5. I would be glad to have any code review on your part :)
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
+### Contact me
+- [Linkedin](https://www.linkedin.cn/in/dan-zverev-33841b215)
+- [Telegramm](https://t.me/keyofevergreen)
+- [Twitter](https://twitter.com/keyofevergreen)
+- dany2zverev@gmail.com
