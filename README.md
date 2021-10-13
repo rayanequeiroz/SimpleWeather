@@ -13,7 +13,7 @@ git clone https://github.com/keyofevergreen/weather-by-evergreen.git
 ```
 2. Go to the cloned directory (e.g. cd weather-by-evergreen).
 3. Run `npm install`.
-4. Run `npm start`. The command will start a local live server. Open (http://localhost:3030/weather-by-evergreen) in your browser, if the tab doesn't open automatically
+4. Run `npm start`. The command will start a local live server. Open (http://localhost:3030/weather-by-evergreen) in your browser, if the tab doesn't open automatically.
 5. I would be glad to have any code review on your part :)
 
 ### Contact me
