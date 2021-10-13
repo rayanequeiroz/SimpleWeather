@@ -1,12 +1,12 @@
 import React, { useCallback, useEffect } from 'react';
 import { connect } from 'react-redux';
-import { Route, Router, Switch } from 'react-router-dom';
-import CitiesList from './pages/CitiesList';
+import {Redirect, Route, Router, Switch} from 'react-router-dom';
 import WeatherToday from './pages/WeatherToday';
 import useDebounce from './functions/useDebounce';
 import { history } from './historyVar';
 import store from './store/store';
 import {fetchWeather, setCity} from "./store/weatherReducer";
+import Cities from "./pages/Cities";
 
 
 const App = (props) => {
@@ -35,15 +35,13 @@ const App = (props) => {
   return (
     <Router history={history}>
       <Switch>
-        <Route exact path="/weather-by-evergreen">
-          <WeatherToday />
-        </Route>
-        <Route exact path="/city/:name">
+        <Route exact path="/">
           <WeatherToday />
         </Route>
         <Route exact path="/cities">
-          <CitiesList />
+          <Cities />
         </Route>
+        <Redirect to="/" />
       </Switch>
     </Router>
   );
