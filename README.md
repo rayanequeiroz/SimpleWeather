@@ -6,7 +6,7 @@ I also used the [MUI library](https://mui.com/) for buttons and a [react-router]
 
 
 ## How to use
-### Go to the [gh-pages](https://keyofevergreen.github.io/weather-by-evergreen/)!
+### 🐱‍🏍Go to the [gh-pages](https://keyofevergreen.github.io/weather-by-evergreen/)!
 ### Or
 
 1. Clone this repository.
@@ -19,7 +19,7 @@ git clone https://github.com/keyofevergreen/SimpleWeather.git
 
 ### I would be glad to have any code review on your part :)
 
-### Contact me
+### 🤙Contact me
 - [Linkedin](https://www.linkedin.cn/in/dan-zverev-33841b215)
 - [Telegramm](https://t.me/keyofevergreen)
 - [Twitter](https://twitter.com/keyofevergreen)
