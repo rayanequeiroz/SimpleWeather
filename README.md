@@ -6,6 +6,8 @@ I also used the [MUI library](https://mui.com/) for buttons and a [react-router]
 
 
 ## How to use
+### Go to the [gh-pages](https://keyofevergreen.github.io/weather-by-evergreen/)!
+### Or
 
 1. Clone this repository.
 ```
@@ -14,7 +16,8 @@ git clone https://github.com/keyofevergreen/weather-by-evergreen.git
 2. Go to the cloned directory (e.g. cd weather-by-evergreen).
 3. Run `npm install`.
 4. Run `npm start`. The command will start a local live server. Open (http://localhost:3030/weather-by-evergreen) in your browser, if the tab doesn't open automatically.
-5. I would be glad to have any code review on your part :)
+
+### I would be glad to have any code review on your part :)
 
 ### Contact me
 - [Linkedin](https://www.linkedin.cn/in/dan-zverev-33841b215)
