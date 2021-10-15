@@ -1,4 +1,5 @@
-# Weather app made as a pet project(still in development)
+# SimpleWeather is a small SPA I do as a pet project.
+### So it's still in development.
 
 Hello! This is my first SPA using a combination of React and Redux.\
 It implements the loading of data from API of [weatherapi.com](https://www.weatherapi.com/)\
