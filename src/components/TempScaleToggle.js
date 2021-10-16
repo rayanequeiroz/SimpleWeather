@@ -14,6 +14,7 @@ const TempScaleToggle = () => {
               backgroundColor: "transparent",
               borderColor: "#F9FBFF",
               color: "#2d81ff",
+                textTransform: "capitalize"
             },
             "&.Mui-selected": {
               backgroundColor: "#6BA6FF",
@@ -26,7 +27,7 @@ const TempScaleToggle = () => {
             },
           }}
         >
-          C°
+          Celsius
         </ToggleButton>
         <ToggleButton
           value="fahrenheit"
@@ -35,7 +36,8 @@ const TempScaleToggle = () => {
               borderRadius: "20px",
               backgroundColor: "transparent",
               borderColor: "#F9FBFF",
-              color: "#2d81ff"
+              color: "#2d81ff",
+                textTransform: "capitalize"
             },
             "&.Mui-selected": {
               backgroundColor: "#6BA6FF",
@@ -48,7 +50,7 @@ const TempScaleToggle = () => {
             },
           }}
         >
-          F°
+            Fahrenheit
         </ToggleButton>
       </ToggleButtonGroup>
     </div>
