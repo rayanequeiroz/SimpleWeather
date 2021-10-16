@@ -20,7 +20,7 @@
   line-height: 1em;
 }
 
-.icon {
+.weather__icon {
   grid-area: icon;
   justify-self: flex-end;
   max-height: 124px;
@@ -40,4 +40,10 @@
 .properties__value span {
   margin-left: 8px;
   font-size: 17px;
+}
+
+.condition {
+  margin-top: 10px;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
 }

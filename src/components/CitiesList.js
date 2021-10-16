@@ -5,7 +5,7 @@ import "../styles/CitiesList.css";
 const CitiesList = (props) => {
     if(props.cities.length > 0) {
         return (
-            <div className="flex CitiesList">
+            <div className="flex cities-list">
                 <div className="blue-line"></div>
                 <div className="cities">
                     {props.cities.map(city =>
@@ -16,7 +16,7 @@ const CitiesList = (props) => {
         )
     } else {
         return (
-            <div className="flex CitiesList">
+            <div className="flex cities-list">
                 <div className="blue-line"></div>
                 <div className="cities-empty">
                     <p>Oops!</p>

@@ -1,5 +1,5 @@
 @media (max-width: 830px) {
-  .App {
+  .app {
     margin-top: 40px;
   }
 }
@@ -17,7 +17,7 @@
     padding-left: 0;
   }
 
-  .App {
+  .app {
     width: 294px;
     height: 520px;
     margin-top: 80px;
@@ -34,11 +34,11 @@
     column-gap: 0;
   }
 
-  .city-search h1 {
+  .search h1 {
     font-size: 20px;
   }
 
-  .icon {
+  .weather__icon {
     justify-self: center;
     max-height: 110px;
   }
@@ -61,7 +61,7 @@
     font-size: 15px;
   }
 
-  .city-search input {
+  .search input {
     max-width: 270px;
     font-size: 25px !important;
   }
@@ -78,14 +78,14 @@
     padding-left: 10px;
   }
 
-  .App {
+  .app {
     width: 260px;
     height: 450px;
     padding-right: 20px;
     padding-left: 20px;
   }
 
-  .city-search h1 {
+  .search h1 {
     font-size: 15px;
   }
 
@@ -93,12 +93,12 @@
     font-size: 15px;
   }
 
-  .city-search input {
+  .search input {
     max-width: 235px;
     font-size: 20px !important;
   }
 
-  .icon {
+  .weather__icon {
     max-height: 90px;
   }
 

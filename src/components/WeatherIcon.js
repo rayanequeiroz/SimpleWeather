@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import "../styles/Forecast.css";
 
 const WeatherIcon = (props) => {
   let timeOfDay = "day";
@@ -10,8 +11,8 @@ const WeatherIcon = (props) => {
   const weatherSrc = `/assets/icons/${timeOfDay}/${props.code}.svg`;
 
   return (
-    <div className="icon">
-      <object data={process.env.PUBLIC_URL + weatherSrc} className="icon"  type="image/svg+xml" aria-label="icon of weather"/>
+    <div className="weather__icon">
+      <object data={process.env.PUBLIC_URL + weatherSrc} className="weather__icon"  type="image/svg+xml" aria-label="icon of weather"/>
     </div>
   )
 

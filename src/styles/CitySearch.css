@@ -1,14 +1,14 @@
-.city-search {
+.search {
   position: relative;
 }
 
-.city-search h1 {
+.search h1 {
   margin: 0;
   font-weight: 400;
   font-size: 24px;
 }
 
-.city-search input {
+.search input {
   display: inline-block;
   max-width: 560px;
   height: 40px;
@@ -23,7 +23,7 @@
   border-bottom: 1px solid white;
 }
 
-.city-search input:focus,
-.city-search input:hover {
+.search input:focus,
+.search input:hover {
   outline: none !important;
 }

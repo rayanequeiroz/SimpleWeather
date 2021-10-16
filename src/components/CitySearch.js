@@ -7,7 +7,7 @@ import { setCity } from "../store/weatherReducer";
 
 const CitySearch = (props) => {
   return (
-    <div className="city-search">
+    <div className="search">
       <h1>Right now in</h1>
       <AutosizeInput
         type="text"
