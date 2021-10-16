@@ -9,6 +9,7 @@ import './styles/adaptiveApp.css'
 import {getCitiesFromLocaleStorage} from "./store/favoriteCitiesReducer";
 import {createTheme} from "@mui/material";
 import {ThemeProvider} from "@emotion/react";
+import {BrowserRouter} from "react-router-dom";
 
 if(!localStorage.getItem('cities')) {
     localStorage.setItem('cities', '[]');
@@ -31,11 +32,15 @@ const theme = createTheme({
     }
 });
 
+
+
 const rootElement = document.getElementById('root')
 ReactDOM.render(
   <Provider store={store}>
       <ThemeProvider theme={theme}>
-    <App />
+          <BrowserRouter basename="/SimpleWeather">
+              <App />
+          </BrowserRouter>
       </ThemeProvider>
   </Provider>,
   rootElement

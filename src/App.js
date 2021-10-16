@@ -35,13 +35,13 @@ const App = (props) => {
   return (
     <Router history={history}>
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/SimpleWeather">
           <WeatherToday />
         </Route>
-        <Route exact path="/cities">
+        <Route exact path="/SimpleWeather/cities">
           <Cities />
         </Route>
-        <Redirect to="/" />
+        <Redirect to="/SimpleWeather"/>
       </Switch>
     </Router>
   );
