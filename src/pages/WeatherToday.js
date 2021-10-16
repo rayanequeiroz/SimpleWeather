@@ -10,7 +10,7 @@ const WeatherToday = () => {
     <div>
         <div className="app">
             <FavoriteCityButton />
-            <Link to="/SimpleWeather/cities">
+            <Link to="/SimpleWeather/cities" className="app__list-button">
                 <ListButton />
             </Link>
             <CitySearch />
