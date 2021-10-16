@@ -3,6 +3,7 @@ import store from "./store";
 
 export const SET_CITY = "SET_CITY";
 export const UPDATE_WEATHER = "UPDATE_WEATHER";
+export const CHANGE_TEMP_SCALE = "CHANGE_TEMP_SCALE";
 
 export function setCity(city) {
     return { type: SET_CITY, payload: city };
@@ -10,6 +11,10 @@ export function setCity(city) {
 
 export function updateWeather(response) {
     return { type: UPDATE_WEATHER, payload: response };
+}
+
+export function changeTempScale(response) {
+ return { type: CHANGE_TEMP_SCALE, payload: response };
 }
 
 export const initialState = {
@@ -22,7 +27,8 @@ export const initialState = {
     pressure: "",
     humidity: "",
     code: "",
-    isDay: ""
+    isDay: "",
+    tempScale: "celsius"
 };
 
 export function weatherReducer(state = initialState, action) {
@@ -42,6 +48,11 @@ export function weatherReducer(state = initialState, action) {
                 code: action.payload.current.condition.code,
                 isDay: action.payload.current.is_day,
             };
+        case CHANGE_TEMP_SCALE:
+            return {
+                ...state,
+                tempScale: action.payload
+            }
         default:
             return state;
     }
