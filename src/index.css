@@ -15,6 +15,7 @@ body {
 }
 
 .app {
+  position: relative;
   width: 580px;
   height: 370px;
   margin: 200px auto 100px auto;
@@ -28,6 +29,12 @@ body {
   );
   border-radius: 40px;
   box-shadow: 1px 5px 7px 1px #00000040;
+}
+
+.app__list-button {
+  position: absolute;
+  top: 28px;
+  right: 35px;
 }
 
 .grid {
