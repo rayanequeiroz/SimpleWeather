@@ -7,14 +7,14 @@ I also used the [MUI library](https://mui.com/) for buttons and a [react-router]
 
 
 ## How to use
-### 🐱‍🏍Go to the [gh-pages](https://keyofevergreen.github.io/weather-by-evergreen/)!
+### 🐱‍🏍Go to the [gh-pages](https://keyofevergreen.github.io/SimpleWeather/)!
 ### Or
 
 1. Clone this repository.
 ```
 git clone https://github.com/keyofevergreen/SimpleWeather.git
 ```
-2. Go to the cloned directory (e.g. cd weather-by-evergreen).
+2. Go to the cloned directory (e.g. cd SimpleWeather).
 3. Run `npm install`.
 4. Run `npm start`. The command will start a local live server. Open (http://localhost:3000/SimpleWeather) in your browser, if the tab doesn't open automatically.
 
