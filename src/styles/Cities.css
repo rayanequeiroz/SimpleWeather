@@ -1,4 +1,5 @@
-.Cities {
+.cities-page {
+    position: relative;
     width: 580px;
     height: 370px;
     margin: 200px auto 100px auto;
@@ -13,18 +14,24 @@
     gap: 25px;
 }
 
-.Cities__container {
+.cities-page__list {
     width: 341px;
     text-align: center;
 }
 
-.Cities-header {
+.cities-page-header {
     font-size: 23px;
     margin-bottom: 25px;
     font-weight: 400;
 }
 
-.Cities__settings {
+.cities-page__settings {
     margin: 55px auto 0;
     width: 100%;
+}
+
+.cities-page__back-btn {
+    position: absolute;
+    top: 17px;
+    left: 35px;
 }
