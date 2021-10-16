@@ -7,13 +7,15 @@ import { Link } from "react-router-dom";
 
 const WeatherToday = () => {
   return (
-    <div className="App">
-      <FavoriteCityButton />
-      <Link to="/cities">
-        <ListButton />
-      </Link>
-      <CitySearch />
-      <Forecast />
+    <div>
+        <div className="app">
+            <FavoriteCityButton />
+            <Link to="/SimpleWeather/cities">
+                <ListButton />
+            </Link>
+            <CitySearch />
+            <Forecast />
+        </div>
     </div>
   );
 };
