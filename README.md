@@ -10,13 +10,15 @@ I also used the [MUI library](https://mui.com/) for buttons and a [react-router]
 ### 🐱‍🏍Go to the [gh-pages](https://keyofevergreen.github.io/SimpleWeather/)!
 ### Or
 
-1. Clone this repository.
+1. You need to register at [weatherapi.com](https://www.weatherapi.com/) and get an API key (Note that the request has all the checkboxes next to the fields in the tab "API Response Fields").
+2. Clone this repository.
 ```
 git clone https://github.com/keyofevergreen/SimpleWeather.git
 ```
-2. Go to the cloned directory (e.g. cd SimpleWeather).
-3. Run `npm install`.
-4. Run `npm start`. The command will start a local live server. Open (http://localhost:3000/SimpleWeather) in your browser, if the tab doesn't open automatically.
+3. Go to the cloned directory (e.g. cd SimpleWeather).
+4. Add the API key to the ".env.example" file
+5. Run `npm install`.
+6. Run `npm start`. The command will start a local live server. Open (http://localhost:3000/SimpleWeather) in your browser, if the tab doesn't open automatically.
 
 ### I would be glad to have any code review on your part :)
 
