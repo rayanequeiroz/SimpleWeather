@@ -1,6 +1,6 @@
 const fetchData = async (location) => {
   try {
-    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=82774a2578a94d41a08172943211710&q=${location}&aqi=no`);
+    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_API_KEY}&q=${location}&aqi=no`);
     const data = await response.json();
     console.log(data);
     return data;
