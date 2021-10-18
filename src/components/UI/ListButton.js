@@ -1,11 +1,11 @@
 import React from "react";
 import { IconButton } from "@mui/material";
-import PublicIcon from '@mui/icons-material/Public';
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 
-const ListButton = (props) => {
+const ListButton = () => {
   return (
     <IconButton size="large" sx={{ color: "white"}}>
-      <PublicIcon fontSize="large"/>
+      <FormatListBulletedIcon fontSize="large"/>
     </IconButton>
   );
 };
