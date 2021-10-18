@@ -12,12 +12,20 @@
   justify-self: center;
 }
 
-.weather__temp h1 {
+.weather__temp-scale {
   margin: 0;
-  font-weight: 300;
-  font-size: 120px;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Roboto", monospace;
   line-height: 1em;
+}
+
+.celsius {
+  font-size: 120px;
+  font-weight: 300;
+}
+
+.fahrenheit {
+  font-size: 110px;
+  font-weight: 300;
 }
 
 .weather__icon {

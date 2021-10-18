@@ -43,8 +43,12 @@
     max-height: 110px;
   }
 
-  .temp h1 {
+  .celsius {
     font-size: 90px;
+  }
+
+  .fahrenheit {
+    font-size: 80px;
   }
 
   .weather__properties {
@@ -102,8 +106,12 @@
     max-height: 90px;
   }
 
-  .weather__temp h1 {
-    font-size: 70px;
+  .celsius {
+    font-size: 60px;
+  }
+
+  .fahrenheit {
+    font-size: 50px;
   }
 
   .weather__properties {
