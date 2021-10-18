@@ -4,7 +4,7 @@ import CitiesPageBackButton from "../components/CitiesPageBackButton";
 import CitiesList from "../components/CitiesList";
 import TempScaleToggle from "../components/TempScaleToggle";
 
-const Cities = () => {
+const CitiesPage = () => {
   return (
     <div className="cities-page">
         <CitiesPageBackButton/>
@@ -20,4 +20,4 @@ const Cities = () => {
   );
 };
 
-export default Cities;
+export default CitiesPage;
