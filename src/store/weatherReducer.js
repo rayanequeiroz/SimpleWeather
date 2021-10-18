@@ -1,4 +1,4 @@
-import fetchData from "../functions/fetchData";
+import fetchData from "../API/fetchData";
 import store from "./store";
 
 export const SET_CITY = "SET_CITY";
