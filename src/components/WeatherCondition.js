@@ -3,16 +3,14 @@ import '../styles/Forecast.css';
 import { connect } from 'react-redux';
 
 const WeatherCondition = (props) => {
-  if (!props.condition || props.location.toLowerCase() !== props.responseLocation.toLowerCase()) {
+  if(props.location.toLowerCase() === props.responseLocation.toLowerCase()) {
     return (
-      <span/>
-    );
-  }
-
-  if (props.condition) {
+        <div className="condition">{props.condition}</div>
+    )
+  } else {
     return (
-      <div className="condition">{props.condition}</div>
-    );
+        <span/>
+    )
   }
 }
 
