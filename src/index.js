@@ -10,6 +10,7 @@ import {getCitiesFromLocaleStorage} from "./store/favoriteCitiesReducer";
 import {createTheme} from "@mui/material";
 import {ThemeProvider} from "@emotion/react";
 import {BrowserRouter} from "react-router-dom";
+import {changeTempScale} from "./store/weatherReducer";
 
 if(!localStorage.getItem('cities')) {
     localStorage.setItem('cities', '[]');
@@ -17,6 +18,10 @@ if(!localStorage.getItem('cities')) {
     const citiesStr = localStorage.getItem('cities')
     const cities = JSON.parse(citiesStr);
     store.dispatch(getCitiesFromLocaleStorage(cities));
+}
+
+if(localStorage.getItem("tempScale")) {
+    store.dispatch(changeTempScale(localStorage.getItem("tempScale")))
 }
 
 const theme = createTheme({
