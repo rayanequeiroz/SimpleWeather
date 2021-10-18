@@ -1,37 +1,12 @@
-import React, { useCallback, useEffect } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
 import {Redirect, Route, Router, Switch} from 'react-router-dom';
 import WeatherToday from './pages/WeatherToday';
-import useDebounce from './functions/useDebounce';
 import { history } from './historyVar';
-import store from './store/store';
-import {fetchWeather, setCity} from "./store/weatherReducer";
-import Cities from "./pages/Cities";
+import CitiesPage from "./pages/CitiesPage";
+import CityPage from "./pages/CityPage";
 
 
 const App = (props) => {
-  useEffect(() => {
-    if (localStorage.getItem('location') && props.location === '') {
-      store.dispatch(setCity(localStorage.getItem('location')));
-    }
-  }, []);
-
-  useEffect(() => {
-    return () => {
-      localStorage.setItem('location', props.location);
-    };
-  }, []);
-
-  const debouncedLocation = useDebounce(props.location.trim(), 700);
-
-  const memoLoadWeather = useCallback(fetchWeather(debouncedLocation), [debouncedLocation]);
-
-  useEffect(() => {
-    if (debouncedLocation) {
-      memoLoadWeather();
-    }
-  }, [debouncedLocation, memoLoadWeather]);
-
   return (
     <Router history={history}>
       <Switch>
@@ -39,17 +14,14 @@ const App = (props) => {
           <WeatherToday />
         </Route>
         <Route exact path="/SimpleWeather/cities">
-          <Cities />
+          <CitiesPage />
+        </Route>
+        <Route exact path="/SimpleWeather/cities/:city">
+          <CityPage />
         </Route>
         <Redirect to="/SimpleWeather"/>
       </Switch>
     </Router>
   );
 };
-
-
-const mapStateToProps = (state) => ({
-  location: state.weatherData.location,
-  favoriteCities: state.cities.arrOfCities
-});
-export default connect(mapStateToProps)(App);
+export default App;

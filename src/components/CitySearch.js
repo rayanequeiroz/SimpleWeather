@@ -1,34 +1,59 @@
-import React, { useEffect, useState } from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import AutosizeInput from "react-input-autosize";
-import { connect } from "react-redux";
+import {connect} from "react-redux";
 import "../styles/CitySearch.css";
 import WeatherCondition from "./WeatherCondition";
-import { setCity } from "../store/weatherReducer";
+import {fetchWeather, setCity} from "../store/weatherReducer";
+import store from "../store/store";
+import useDebounce from "../helpers/useDebounce";
 
 const CitySearch = (props) => {
-  return (
-    <div className="search">
-      <h1>Right now in</h1>
-      <AutosizeInput
-        type="text"
-        minWidth="70"
-        inputStyle={{ fontSize: 35, fontWeight: 600, display: "block" }}
-        value={props.location}
-        onChange={(e) => props.onChange(e)}
-      />
-      <WeatherCondition />
-    </div>
-  );
+    useEffect(() => {
+        if (localStorage.getItem('location') && props.location === '') {
+            store.dispatch(setCity(localStorage.getItem('location')));
+        }
+    }, [])
+
+    useEffect(() => {
+        return () => {
+            localStorage.setItem('location', props.location);
+        };
+    }, []);
+
+    const debouncedLocation = useDebounce(props.location.trim(), 700);
+
+    const memoLoadWeather = useCallback(fetchWeather(debouncedLocation), [debouncedLocation]);
+
+    useEffect(() => {
+        if (debouncedLocation) {
+            memoLoadWeather();
+        }
+    }, [debouncedLocation, memoLoadWeather]);
+
+    return (
+        <div className="search">
+            <h1>Right now in</h1>
+            <AutosizeInput
+                type="text"
+                minWidth="70"
+                inputStyle={{fontSize: 35, fontWeight: 600, display: "block"}}
+                value={props.location}
+                onChange={(e) => props.onChange(e)}
+            />
+            <WeatherCondition/>
+        </div>
+    );
 };
 
 const mapStateToProps = (state) => ({
-  location: state.weatherData.location
+    location: state.weatherData.location,
+    favoriteCities: state.weatherData.favoriteCities
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  onChange: (event) => {
-    dispatch(setCity(event.target.value));
-  }
+    onChange: (event) => {
+        dispatch(setCity(event.target.value));
+    }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CitySearch);
