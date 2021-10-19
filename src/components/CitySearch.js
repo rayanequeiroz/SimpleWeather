@@ -1,9 +1,8 @@
-import React, {useCallback, useEffect, useState} from "react";
+import React, {useCallback, useEffect} from "react";
 import AutosizeInput from "react-input-autosize";
 import {connect} from "react-redux";
 import "../styles/CitySearch.css";
-import WeatherCondition from "./WeatherCondition";
-import {fetchWeather, setCity} from "../store/weatherReducer";
+import {fetchWeather, setCity} from "../store/weatherReducer/weatherReducer";
 import store from "../store/store";
 import useDebounce from "../helpers/useDebounce";
 
@@ -31,16 +30,15 @@ const CitySearch = (props) => {
     }, [debouncedLocation, memoLoadWeather]);
 
     return (
-        <div className="search">
+        <div className='search'>
             <h1>Right now in</h1>
             <AutosizeInput
-                type="text"
-                minWidth="70"
-                inputStyle={{fontSize: 35, fontWeight: 600, display: "block"}}
+                type='text'
+                minWidth='70'
+                inputStyle={{fontSize: 35, fontWeight: 600, display: 'block'}}
                 value={props.location}
                 onChange={(e) => props.onChange(e)}
             />
-            <WeatherCondition/>
         </div>
     );
 };

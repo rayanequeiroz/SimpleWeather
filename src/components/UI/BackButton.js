@@ -4,8 +4,8 @@ import {IconButton} from "@mui/material";
 
 const BackButton = (props) => {
     return (
-        <IconButton size="large" {...props}>
-            <ArrowBackIcon fontSize="large"/>
+        <IconButton size='large' {...props}>
+            <ArrowBackIcon fontSize='large'/>
         </IconButton>
     );
 };

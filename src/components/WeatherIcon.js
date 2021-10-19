@@ -1,25 +1,26 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import "../styles/Forecast.css";
 
 const WeatherIcon = (props) => {
-  let timeOfDay = "day";
-  if (!props.isDay) {
-    timeOfDay = "night";
-  }
+    let timeOfDay = 'day';
+    if (!props.isDay) {
+        timeOfDay = 'night';
+    }
 
-  const weatherSrc = `/assets/icons/${timeOfDay}/${props.code}.svg`;
+    const weatherSrc = `/assets/icons/${timeOfDay}/${props.code}.svg`;
 
-  return (
-    <div className="weather__icon">
-      <object data={process.env.PUBLIC_URL + weatherSrc} className="weather__icon"  type="image/svg+xml" aria-label="icon of weather"/>
-    </div>
-  )
+    return (
+        <div className='weather__icon'>
+            <object data={process.env.PUBLIC_URL + weatherSrc} className='weather__icon' type='image/svg+xml'
+                    aria-label='icon of weather'/>
+        </div>
+    )
 
 }
 
 const mapStateToProps = (state) => ({
-  code: state.weatherData.code,
-  isDay: state.weatherData.isDay
+    code: state.weatherData.code,
+    isDay: state.weatherData.isDay
 })
 export default connect(mapStateToProps)(WeatherIcon);

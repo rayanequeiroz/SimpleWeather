@@ -5,19 +5,19 @@ import CitiesList from "../components/CitiesList";
 import TempScaleToggle from "../components/TempScaleToggle";
 
 const CitiesPage = () => {
-  return (
-    <div className="cities-page">
-        <CitiesPageBackButton/>
-      <div className="cities-page__list">
-        <h1 className="cities-page-header">Favorite cities</h1>
-        <CitiesList />
-      </div>
-        <div className="cities-page__settings">
-            <h1 className="cities-page-header">Settings</h1>
-            <TempScaleToggle/>
+    return (
+        <div className='cities-page'>
+            <CitiesPageBackButton/>
+            <div className='cities-page__list'>
+                <h1 className='cities-page-header'>Favorite cities</h1>
+                <CitiesList/>
+            </div>
+            <div className='cities-page__settings'>
+                <h1 className='cities-page-header'>Settings</h1>
+                <TempScaleToggle/>
+            </div>
         </div>
-    </div>
-  );
+    );
 };
 
 export default CitiesPage;
