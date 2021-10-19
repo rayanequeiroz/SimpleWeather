@@ -1,0 +1,3 @@
+export const SET_CITY = "SET_CITY";
+export const UPDATE_WEATHER = "UPDATE_WEATHER";
+export const CHANGE_TEMP_SCALE = "CHANGE_TEMP_SCALE";
