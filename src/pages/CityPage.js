@@ -13,20 +13,20 @@ const CityPage = (props) => {
 
     // Redirect to the home page if you start looking for another city
     useEffect(() => {
-        if(props.location !== params.city) {
-            router.push(`/SimpleWeather`);
+        if (props.location !== params.city) {
+            router.push('/SimpleWeather');
         }
     }, [props.location])
 
     return (
         <div>
-            <div className="app">
-                <FavoriteCityButton />
-                <Link to="/SimpleWeather/cities" className="app__list-button">
-                    <ListButton />
+            <div className='app'>
+                <FavoriteCityButton/>
+                <Link to='/SimpleWeather/cities' className='app__list-button'>
+                    <ListButton/>
                 </Link>
-                <CitySearch />
-                <Forecast />
+                <CitySearch/>
+                <Forecast/>
             </div>
         </div>
     );
