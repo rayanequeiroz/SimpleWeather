@@ -15,7 +15,7 @@ const TempScaleToggle = (props) => {
                 color='secondary'
                 value={value}
                 exclusive
-                fullWidth='true'
+                fullWidth={true}
                 sx={{height: '20px'}}
                 onChange={() => {
                     if (value === 'celsius') {
