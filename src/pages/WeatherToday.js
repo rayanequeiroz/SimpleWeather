@@ -6,7 +6,7 @@ import ListButton from "../components/UI/ListButton";
 import {Link} from "react-router-dom";
 import {connect} from "react-redux";
 
-const WeatherToday = () => {
+const WeatherToday = (props) => {
     if (props.responseLocation && props.location === props.responseLocation.toLowerCase()) {
         return (
             <div>
