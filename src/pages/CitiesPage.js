@@ -1,10 +1,24 @@
-import React from "react";
-import "../styles/Cities.css";
+import React, {useEffect} from "react";
+import "../styles/CitiesPage.css";
 import CitiesPageBackButton from "../components/CitiesPageBackButton";
 import CitiesList from "../components/CitiesList";
 import TempScaleToggle from "../components/TempScaleToggle";
+import {connect} from "react-redux";
+import {fetchCityTemp} from "../store/favoriteCitiesReducer/favoriteCitiesReducer";
 
-const CitiesPage = () => {
+const CitiesPage = (props) => {
+    const fifteenMinutes = 90000;
+    const currentDate = Date.now();
+
+    useEffect(() => {
+        props.cities.forEach((obj) => {
+            if(currentDate - obj.lastUpdated > fifteenMinutes) {
+                props.fetchCityTemp(obj.city)
+            }
+            localStorage.setItem('cities', JSON.stringify(props.cities));
+        })
+    }, [])
+
     return (
         <div className='cities-page'>
             <CitiesPageBackButton/>
@@ -20,4 +34,14 @@ const CitiesPage = () => {
     );
 };
 
-export default CitiesPage;
+const mapStateToProps = (state) => ({
+    cities: state.cities.arrOfCities
+})
+
+const mapDispatchToProps = (dispatch) => ({
+    fetchCityTemp: (city) => {
+        dispatch(fetchCityTemp(city));
+    }
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(CitiesPage);
