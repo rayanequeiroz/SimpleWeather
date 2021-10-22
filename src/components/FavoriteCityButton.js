@@ -32,8 +32,8 @@ const FavoriteCityButton = (props) => {
                 if (!isFavorite) {
                     props.addToFavorites({
                         city: props.location,
-                        temp_c: props.temp_c.toFixed(),
-                        temp_f: props.temp_f.toFixed(),
+                        temp_c: props.temp_c,
+                        temp_f: props.temp_f,
                         lastUpdated: Date.now()
                     });
                     setFavorite(!isFavorite);
