@@ -4,11 +4,11 @@ import {connect} from "react-redux";
 import {addToFavorites, removeFromFavorites} from "../store/favoriteCitiesReducer/favoriteCitiesReducer";
 
 const FavoriteCityButton = (props) => {
-    const [isFavorite, setFavorite] = useState(props.favoriteCities.find(obj => obj.city === props.location))
+    const [isFavorite, setFavorite] = useState(props.cities.find(obj => obj.city === props.location))
     const [isDisabled, setDisabled] = useState(false);
 
     useEffect(() => {
-        setFavorite(props.favoriteCities.find(obj => obj.city === props.location));
+        setFavorite(props.cities.find(obj => obj.city === props.location));
     }, [props.location]);
 
     useEffect(() => {
@@ -23,8 +23,8 @@ const FavoriteCityButton = (props) => {
     }, [props.location, props.responseLocation]);
 
     useEffect(() => {
-        localStorage.setItem('cities', JSON.stringify(props.favoriteCities));
-    }, [props.favoriteCities]);
+        localStorage.setItem('cities', JSON.stringify(props.cities));
+    }, [props.cities]);
 
     return (
         <FavoriteButton
@@ -32,8 +32,8 @@ const FavoriteCityButton = (props) => {
                 if (!isFavorite) {
                     props.addToFavorites({
                         city: props.location,
-                        celsius: props.temp_c,
-                        fahrenheit: props.temp_f,
+                        temp_c: props.temp_c.toFixed(),
+                        temp_f: props.temp_f.toFixed(),
                         lastUpdated: Date.now()
                     });
                     setFavorite(!isFavorite);
@@ -53,7 +53,7 @@ const mapStateToProps = (state) => ({
     responseLocation: state.weatherData.responseLocation,
     temp_c: state.weatherData.temp_c,
     temp_f: state.weatherData.temp_f,
-    favoriteCities: state.cities.arrOfCities,
+    cities: state.cities.arrOfCities,
 });
 
 const mapDispatchToProps = (dispatch) => ({
