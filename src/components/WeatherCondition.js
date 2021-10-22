@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 const WeatherCondition = (props) => {
         return (
-            <div className='condition'>{props.condition}</div>
+            <div className='condition'>it's {props.condition}</div>
         )
 }
 
