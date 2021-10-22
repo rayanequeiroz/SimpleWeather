@@ -14,6 +14,9 @@ const FavoriteButton = (props) => {
                 '&.Mui-checked': {
                     color: 'white',
                 },
+                '&.Mui-disabled': {
+                    color: 'transparent',
+                }
             }}
         />
     );
