@@ -8,11 +8,11 @@ const WeatherIcon = (props) => {
         timeOfDay = 'night';
     }
 
-    const weatherSrc = `/assets/icons/${timeOfDay}/${props.code}.svg`;
+    const weatherSrc = `${process.env.PUBLIC_URL}/assets/icons/${timeOfDay}/${props.code}.svg`;
 
     return (
         <div className='weather__icon'>
-            <object data={process.env.PUBLIC_URL + weatherSrc} className='weather__icon' type='image/svg+xml'
+            <object data={weatherSrc} className='weather__icon' type='image/svg+xml'
                     aria-label='icon of weather'/>
         </div>
     )
