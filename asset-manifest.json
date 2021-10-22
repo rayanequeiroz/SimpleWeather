@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/SimpleWeather/static/css/main.cfe9acdf.chunk.css",
-    "main.js": "/SimpleWeather/static/js/main.a7e26b13.chunk.js",
-    "main.js.map": "/SimpleWeather/static/js/main.a7e26b13.chunk.js.map",
+    "main.js": "/SimpleWeather/static/js/main.1a1d9c49.chunk.js",
+    "main.js.map": "/SimpleWeather/static/js/main.1a1d9c49.chunk.js.map",
     "runtime-main.js": "/SimpleWeather/static/js/runtime-main.aec1638c.js",
     "runtime-main.js.map": "/SimpleWeather/static/js/runtime-main.aec1638c.js.map",
     "static/js/2.b465fd46.chunk.js": "/SimpleWeather/static/js/2.b465fd46.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.aec1638c.js",
     "static/js/2.b465fd46.chunk.js",
     "static/css/main.cfe9acdf.chunk.css",
-    "static/js/main.a7e26b13.chunk.js"
+    "static/js/main.1a1d9c49.chunk.js"
   ]
 }
