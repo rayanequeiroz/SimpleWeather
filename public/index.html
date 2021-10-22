@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
   <style>
     @font-face {
       font-family: 'Roboto Slab';
@@ -23,6 +24,11 @@
     @font-face {
       font-family: 'Roboto Mono';
       src: url(%PUBLIC_URL%/assets/fonts/RobotoMono-VariableFont_wght.ttf) format("truetype");
+    }
+
+    html {
+      font-family: "Roboto Slab", serif;
+      background: url(%PUBLIC_URL%/background-pattern.png) repeat center/20%;
     }
   </style>
   <script type="text/javascript">
