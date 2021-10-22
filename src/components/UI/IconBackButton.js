@@ -2,7 +2,7 @@ import React from 'react';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import {IconButton} from "@mui/material";
 
-const BackButton = (props) => {
+const IconBackButton = (props) => {
     return (
         <IconButton size='large' {...props}>
             <ArrowBackIcon fontSize='large'/>
@@ -10,4 +10,4 @@ const BackButton = (props) => {
     );
 };
 
-export default BackButton;
+export default IconBackButton;
