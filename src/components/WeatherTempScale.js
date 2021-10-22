@@ -5,13 +5,13 @@ const WeatherTempScale = (props) => {
     if (props.tempScale === 'celsius') {
         return (
             <h1 className='celsius'>
-                {props.temp_c.toFixed()}
+                {props.temp_c}
             </h1>
         )
     } else {
         return (
             <h1 className='fahrenheit'>
-                {props.temp_f.toFixed()}
+                {props.temp_f}
             </h1>
         )
     }
