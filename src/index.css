@@ -21,12 +21,7 @@ body {
     margin: 200px auto 100px auto;
     padding: 31px 58px;
     text-align: center;
-    background: linear-gradient(
-            180deg,
-            #072f6a 0%,
-            rgba(1, 33, 81, 0.869792) 0.01%,
-            #2d81ff 100%
-    );
+    background: linear-gradient(180deg, #08C8F6 0%, rgba(12, 78, 177, 0.869792) 0.01%, #09C6F9 0.02%, #4D5DFB 96.87%);
     border-radius: 40px;
     box-shadow: 1px 5px 7px 1px #00000040;
 }
