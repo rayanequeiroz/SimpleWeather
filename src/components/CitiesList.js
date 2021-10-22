@@ -18,8 +18,10 @@ const CitiesList = (props) => {
                                 props.updateCityInStore(obj.city);
                             }}
                             className='cities__btn'
+                            key={obj.city}
                         >
-                            <div className='cities__item'>{obj.city}</div>
+                            <div>{obj.city}</div>
+                            <div>{props.tempScale === "celsius" ? obj.temp_c : obj.temp_f }°</div>
                         </button>
                     ))}
                 </div>
@@ -41,6 +43,7 @@ const CitiesList = (props) => {
 
 const mapStateToProps = (state) => ({
     cities: state.cities.arrOfCities,
+    tempScale: state.weatherData.tempScale,
 });
 
 const mapDispatchToProps = (dispatch) => ({

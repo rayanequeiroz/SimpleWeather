@@ -35,21 +35,6 @@
     border-radius: 10px;
 }
 
-.cities__item {
-    padding-left: 21px;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    text-transform: capitalize;
-    width: 270px;
-    height: 60px;
-    color: #2d81ff;
-    border: 1px solid #5f9fff;
-    box-shadow: 0 4px 4px 0 #00000026;
-    border-radius: 20px;
-    flex-shrink: 0;
-}
-
 .cities-empty {
     padding-top: 10px;
     align-items: center;
@@ -67,10 +52,18 @@
 }
 
 .cities__btn {
-    padding: 0;
-    border: none;
-    font: inherit;
-    color: inherit;
+    padding: 0 21px;
     background-color: transparent;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    text-transform: capitalize;
+    width: 291px;
+    height: 60px;
+    color: #2d81ff;
+    border: 1px solid #5f9fff;
+    box-shadow: 0 4px 4px 0 #00000026;
+    border-radius: 20px;
 }
