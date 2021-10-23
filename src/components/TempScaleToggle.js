@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import {ToggleButton, ToggleButtonGroup} from "@mui/material";
-import "../styles/TempScaleToggle.css";
 import {connect} from "react-redux";
 import {changeTempScale} from "../store/weatherReducer/weatherReducer";
 
@@ -10,7 +9,6 @@ const TempScaleToggle = (props) => {
     }
     const [value, setValue] = useState(localStorage.getItem('tempScale'));
     return (
-        <div className='TempScaleToggle'>
             <ToggleButtonGroup
                 color='secondary'
                 value={value}
@@ -76,7 +74,6 @@ const TempScaleToggle = (props) => {
                     Celsius
                 </ToggleButton>
             </ToggleButtonGroup>
-        </div>
     );
 };
 
