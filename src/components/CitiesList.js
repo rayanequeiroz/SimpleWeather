@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import "../styles/CitiesList.css";
 import {useHistory} from "react-router-dom";
 import {setCity} from "../store/weatherReducer/weatherReducer";
+import CityPageButtonLink from "./CityPageButtonLink";
 
 const CitiesList = (props) => {
     const router = useHistory();
@@ -12,7 +13,7 @@ const CitiesList = (props) => {
                 <div className='blue-line'></div>
                 <div className='cities'>
                     {props.cities.map((obj) => (
-                        <button
+                        <CityPageButtonLink
                             onClick={() => {
                                 router.push(`/SimpleWeather/cities/${obj.city}`);
                                 props.updateCityInStore(obj.city);
@@ -21,8 +22,8 @@ const CitiesList = (props) => {
                             key={obj.city}
                         >
                             <div>{obj.city}</div>
-                            <div>{props.tempScale === "celsius" ? obj.temp_c : obj.temp_f }°</div>
-                        </button>
+                            <div>{props.tempScale === "celsius" ? obj.temp_c : obj.temp_f}°</div>
+                        </CityPageButtonLink>
                     ))}
                 </div>
             </div>
