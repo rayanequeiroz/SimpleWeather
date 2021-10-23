@@ -2,11 +2,11 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import WeatherIcon from './WeatherIcon';
-import '../styles/Forecast.css';
+import '../styles/CurrentForecast.css';
 import WeatherTempScale from "./WeatherTempScale";
 import WeatherCondition from "./WeatherCondition";
 
-const Forecast = (props) => {
+const CurrentForecast = (props) => {
     // Conversion from kph to m/s
     const windToMPS = (props.wind * 1000 / 3600).toFixed(1);
     // Conversion from millibars to millimeters of mercury according to the formula
@@ -39,4 +39,4 @@ const mapStateToProps = (state) => ({
     humidity: state.weatherData.humidity,
 });
 
-export default connect(mapStateToProps)(Forecast);
+export default connect(mapStateToProps)(CurrentForecast);
