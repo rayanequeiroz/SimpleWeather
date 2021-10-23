@@ -4,6 +4,7 @@ import WeatherToday from './pages/WeatherToday';
 import {history} from './historyVar';
 import CitiesPage from "./pages/CitiesPage";
 import CityPage from "./pages/CityPage";
+import ForecastPage from "./pages/ForecastPage";
 
 
 const App = () => {
@@ -18,6 +19,9 @@ const App = () => {
                 </Route>
                 <Route exact path='/SimpleWeather/cities/:city'>
                     <CityPage/>
+                </Route>
+                <Route exact path='/SimpleWeather/forecast'>
+                    <ForecastPage/>
                 </Route>
                 <Redirect to='/SimpleWeather'/>
             </Switch>
