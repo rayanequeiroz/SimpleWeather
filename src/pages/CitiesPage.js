@@ -20,7 +20,7 @@ const CitiesPage = (props) => {
     }, [])
 
     return (
-        <div className='cities-page'>
+        <div className='app app-outlined cities-page'>
             <CitiesPageBackButton/>
             <div className='cities-page__list'>
                 <h1 className='cities-page-header'>Favorite cities</h1>
