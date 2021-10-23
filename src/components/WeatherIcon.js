@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import "../styles/Forecast.css";
+import "../styles/CurrentForecast.css";
 
 const WeatherIcon = (props) => {
     let timeOfDay = 'day';
