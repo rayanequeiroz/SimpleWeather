@@ -15,7 +15,7 @@ I also used the [MUI library](https://mui.com/) for buttons and a [react-router]
 ```
 git clone https://github.com/keyofevergreen/SimpleWeather.git
 ```
-3. Go to the cloned directory (e.g. cd SimpleWeather).
+3. Go to the cloned directory (e.g. `cd SimpleWeather`).
 4. Add the API key to the ".env.example" file
 5. Run `npm install`.
 6. Run `npm start`. The command will start a local live server. Open (http://localhost:3000/SimpleWeather) in your browser, if the tab doesn't open automatically.
