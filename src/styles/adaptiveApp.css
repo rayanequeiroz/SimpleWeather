@@ -74,6 +74,51 @@
     .condition {
         font-size: 20px;
     }
+
+    .app__list-button {
+        top: 57px;
+        right: 20px;
+    }
+
+    .cities-page {
+        flex-direction: column;
+        gap: 55px;
+    }
+
+    .cities-list {
+        width: 290px;
+        height: 300px;
+    }
+
+    .cities__btn {
+        font-size: 16px;
+        padding: 0 15px;
+        width: 250px;
+        height: 50px;
+    }
+
+    .cities {
+        display: flex;
+        gap: 10px;
+        width: 290px;
+        height: 287px;
+    }
+
+    .blue-line {
+        height: 311px;
+    }
+
+    .cities-page__back-btn {
+        top: 46px;
+        left: 17px;
+    }
+
+    .cities-page__settings {
+        margin: 0;
+        padding-top: 15px;
+        border-top: 1px solid #F9FBFF;
+    }
+
 }
 
 @media (max-width: 413px) {
@@ -125,5 +170,41 @@
 
     .properties__value span {
         font-size: 10px;
+    }
+
+    .cities-page {
+        gap: 25px;
+    }
+
+    .cities-list {
+        width: 260px;
+        height: 270px;
+    }
+
+    .cities__btn {
+        font-size: 14px;
+        padding: 0 15px;
+        width: 215px;
+        height: 50px;
+    }
+
+    .cities {
+        display: flex;
+        gap: 10px;
+        width: 260px;
+        height: 227px;
+    }
+
+    .blue-line {
+        height: 251px;
+    }
+
+    .cities-page-header {
+        font-size: 18px;
+    }
+
+    .cities-page__back-btn {
+        top: 46px;
+        left: 10px;
     }
 }
