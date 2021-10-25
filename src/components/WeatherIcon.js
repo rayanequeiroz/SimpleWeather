@@ -12,8 +12,7 @@ const WeatherIcon = (props) => {
 
     return (
         <div className='weather__icon'>
-            <object data={weatherSrc} className='weather__icon' type='image/svg+xml'
-                    aria-label='icon of weather'/>
+            <img src={weatherSrc} className='weather__icon' alt='icon of weather'/>
         </div>
     )
 
