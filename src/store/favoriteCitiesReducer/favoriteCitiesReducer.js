@@ -21,6 +21,8 @@ export function favoriteCitiesReducer(state = citiesState, action) {
                     temp_c: action.payload.temp_c,
                     temp_f: action.payload.temp_f,
                     lastUpdated: action.payload.lastUpdated,
+                    isDay: action.payload.isDay,
+                    code: action.payload.condition.code
                 }]
             };
         case REMOVE_FROM_FAVORITES:

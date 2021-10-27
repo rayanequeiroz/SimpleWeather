@@ -1,12 +1,29 @@
 import store from "../store";
-import {CHANGE_FORECAST_MODE, CHANGE_TEMP_SCALE, SET_CITY, SET_FORECAST, SET_WEATHER} from "./actionTypes";
+import {
+    CHANGE_FORECAST_MODE,
+    CHANGE_TEMP_SCALE,
+    SET_CITY,
+    SET_HOURLY_FORECAST,
+    SET_WEATHER
+} from "./actionTypes";
 import fetchData from "../../helpers/fetchData";
+import getArrOfHours from "../../helpers/getArrOfHours";
 
 export const setCity = (city) => ({type: SET_CITY, payload: city})
 export const setWeather = (response) => ({type: SET_WEATHER, payload: response})
 export const changeTempScale = (response) => ({type: CHANGE_TEMP_SCALE, payload: response})
-export const setForecast = (response) => ({type: SET_FORECAST, payload: response})
 export const changeForecastMod = (response) => ({type: CHANGE_FORECAST_MODE, payload: response})
+export const setHourlyForecast = (response) => ({
+    type: SET_HOURLY_FORECAST, payload: response.map((hour) => {
+        return {
+            temp_c: hour.temp_c,
+            temp_f: hour.temp_f,
+            hour: hour.time,
+            isDay: hour.isDay,
+            code: hour.condition.code
+        };
+    })
+})
 
 
 export const initialState = {
@@ -44,20 +61,29 @@ export function weatherReducer(state = initialState, action) {
                 humidity: action.payload.current.humidity,
                 code: action.payload.current.condition.code,
                 isDay: action.payload.current.is_day,
-                hourlyForecast: action.payload.forecast.forecastday[0].hour.map((hour) => {
-                    return {temp_c: hour.temp_c, temp_f: hour.temp_f};
-                }),
                 threeDayForecast: action.payload.forecast.forecastday.map((day) => {
-                    return {date: day.date_epoch, temp_c: day.day.avgtemp_c, temp_f: day.day.avgtemp_f}
+                    return {
+                        date: day.time,
+                        temp_c: day.day.avgtemp_c,
+                        temp_f: day.day.avgtemp_f,
+                        isDay: day.day.isDay,
+                        code: day.day.condition.code,
+                        condition: day.day.condition.text.toLowerCase()
+                    }
                 })
             };
+        case SET_HOURLY_FORECAST:
+            return {
+                ...state,
+                hourlyForecast: action.payload
+            }
         case CHANGE_TEMP_SCALE:
             return {
                 ...state,
                 tempScale: action.payload
             };
         case CHANGE_FORECAST_MODE:
-            return  {
+            return {
                 ...state,
                 forecastMod: action.payload
             }
@@ -67,10 +93,12 @@ export function weatherReducer(state = initialState, action) {
 }
 
 // This API on the free plan provides a maximum of a three-day forecast
-export const fetchWeather = (debouncedLocation, days = 3) => async (dispatch) => {
+export const fetchWeather = (debouncedLocation, days = 3) => async () => {
     try {
         const data = await (fetchData(debouncedLocation, days));
         store.dispatch(setWeather(data));
+        const hourlyForecast = getArrOfHours(data.forecast.forecastday[0].hour, data.forecast.forecastday[1].hour);
+        store.dispatch(setHourlyForecast(hourlyForecast));
         localStorage.setItem('location', data.location.name);
     } catch (e) {
         console.error(e);
