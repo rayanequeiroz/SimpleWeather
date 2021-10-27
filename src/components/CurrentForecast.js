@@ -16,7 +16,7 @@ const CurrentForecast = (props) => {
         <div>
             <WeatherCondition/>
             <div className='weather grid'>
-                <WeatherIcon/>
+                <WeatherIcon className='weather__icon' color={{fill: '#fff'}} code={props.code} isDay={props.isDay}/>
                 <div className='weather__temp'>
                     <WeatherTempScale className='weather__temp-scale'/>
                 </div>
@@ -37,6 +37,8 @@ const mapStateToProps = (state) => ({
     wind: state.weatherData.wind,
     pressure: state.weatherData.pressure,
     humidity: state.weatherData.humidity,
+    code: state.weatherData.code,
+    isDay: state.weatherData.isDay
 });
 
 export default connect(mapStateToProps)(CurrentForecast);
