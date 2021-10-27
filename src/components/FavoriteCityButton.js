@@ -34,7 +34,9 @@ const FavoriteCityButton = (props) => {
                         city: props.location,
                         temp_c: props.temp_c,
                         temp_f: props.temp_f,
-                        lastUpdated: Date.now()
+                        lastUpdated: Date.now(),
+                        isDay: props.isDay,
+                        code: props.code
                     });
                     setFavorite(!isFavorite);
                 } else {
@@ -54,6 +56,8 @@ const mapStateToProps = (state) => ({
     temp_c: state.weatherData.temp_c,
     temp_f: state.weatherData.temp_f,
     cities: state.cities.arrOfCities,
+    isDay: state.weatherData.isDay,
+    code: state.weatherData.code,
 });
 
 const mapDispatchToProps = (dispatch) => ({
