@@ -31,7 +31,7 @@
 }
 
 .cities__btn {
-    padding: 0 21px;
+    padding: 0 10px 0 21px;
     background-color: transparent;
     cursor: pointer;
     display: flex;
@@ -46,6 +46,20 @@
     box-shadow: 0 4px 4px 0 #00000026;
     border-radius: 20px;
     flex-shrink: 0;
+}
+
+.cities__btn-group {
+    display: flex;
+    align-items: center;
+}
+
+.cities__btn-group svg {
+    max-width: 60px;
+    max-height: 40px;
+}
+
+.cities__btn-group div {
+    width: 40px;
 }
 
 .cities-empty {
