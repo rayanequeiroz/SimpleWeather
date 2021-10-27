@@ -1,26 +1,17 @@
 import React from 'react';
-import {connect} from 'react-redux';
 import "../styles/CurrentForecast.css";
-import day from '../day-sprites.svg';
-import night from '../night-sprites.svg';
+import day from '../icons-sprites/day-sprites.svg';
+import night from '../icons-sprites/night-sprites.svg';
 
-const WeatherIcon = (props) => {
-    const hrefToIcon = `${props.isDay ? day : night}#${props.code}`;
-    const color = {
-        fill: '#fff'
-    }
+const WeatherIcon = ({color, code, isDay, ...props}) => {
+    const hrefToIcon = `${isDay ? day : night}#${code}`;
+
     return (
-        <div className='weather__icon'>
-            <svg className='weather__icon' xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" style={color}>
+            <svg {...props} style={color} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                 <use href={hrefToIcon}></use>
             </svg>
-        </div>
     )
 
 }
 
-const mapStateToProps = (state) => ({
-    code: state.weatherData.code,
-    isDay: state.weatherData.isDay
-})
-export default connect(mapStateToProps)(WeatherIcon);
+export default WeatherIcon;
