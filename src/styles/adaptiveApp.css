@@ -92,9 +92,18 @@
 
     .cities__btn {
         font-size: 16px;
-        padding: 0 15px;
+        padding: 0 10px 0 15px;
         width: 250px;
         height: 50px;
+    }
+
+    .cities__btn-group svg {
+        max-width: 45px;
+        max-height: 35px;
+    }
+
+    .cities__btn-group div {
+        width:35px;
     }
 
     .cities {
@@ -183,9 +192,18 @@
 
     .cities__btn {
         font-size: 14px;
-        padding: 0 15px;
+        padding: 0 10px 0 15px;
         width: 215px;
         height: 50px;
+    }
+
+    .cities__btn-group svg {
+        max-width: 40px;
+        max-height: 30px;
+    }
+
+    .cities__btn-group div {
+        width:35px;
     }
 
     .cities {
