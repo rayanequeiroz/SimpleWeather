@@ -22,7 +22,7 @@ export function favoriteCitiesReducer(state = citiesState, action) {
                     temp_f: action.payload.temp_f,
                     lastUpdated: action.payload.lastUpdated,
                     isDay: action.payload.isDay,
-                    code: action.payload.condition.code
+                    code: action.payload.code
                 }]
             };
         case REMOVE_FROM_FAVORITES:
@@ -44,6 +44,8 @@ export function favoriteCitiesReducer(state = citiesState, action) {
                     ...obj, temp_c: action.payload.current.temp_c.toFixed(),
                     temp_f: action.payload.current.temp_f.toFixed(),
                     lastUpdated: Date.now(),
+                    isDay: action.payload.current.is_day,
+                    code: action.payload.current.condition.code
                 } : obj)
             }
         default:

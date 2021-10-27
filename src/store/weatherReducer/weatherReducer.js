@@ -19,7 +19,7 @@ export const setHourlyForecast = (response) => ({
             temp_c: hour.temp_c,
             temp_f: hour.temp_f,
             hour: hour.time,
-            isDay: hour.isDay,
+            isDay: hour.is_day,
             code: hour.condition.code
         };
     })
@@ -66,7 +66,7 @@ export function weatherReducer(state = initialState, action) {
                         date: day.time,
                         temp_c: day.day.avgtemp_c,
                         temp_f: day.day.avgtemp_f,
-                        isDay: day.day.isDay,
+                        isDay: day.day.is_day,
                         code: day.day.condition.code,
                         condition: day.day.condition.text.toLowerCase()
                     }
