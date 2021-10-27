@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import "../styles/CitiesList.css";
 import {useHistory} from "react-router-dom";
 import {setCity} from "../store/weatherReducer/weatherReducer";
+import WeatherIcon from "./WeatherIcon";
 
 const CitiesList = (props) => {
     const router = useHistory();
@@ -21,7 +22,10 @@ const CitiesList = (props) => {
                             className='cities__btn'
                         >
                             <div>{obj.city}</div>
-                            <div>{props.tempScale === "celsius" ? obj.temp_c : obj.temp_f}°</div>
+                            <div className='cities__btn-group'>
+                                <WeatherIcon className='cities__btn-icon' code={obj.code} isDay={obj.isDay} color={{fill:'#2D81FF'}}/>
+                                <div>{props.tempScale === "celsius" ? obj.temp_c : obj.temp_f}°</div>
+                            </div>
                         </button>
                     ))}
                 </div>
