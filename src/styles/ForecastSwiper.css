@@ -1,0 +1,29 @@
+.swiper {
+    width: 580px;
+    height: 260px;
+    margin: 15px 0;
+    border-top: 1px solid #F9FBFF;
+    border-bottom: 1px solid #F9FBFF;
+}
+
+.swiper__item {
+    background-color: transparent;
+    height: 225px;
+    border-radius: 30px;
+}
+
+.item__date {
+    font-size: 17px;
+    font-weight: normal;
+    margin: 15px 0;
+}
+
+.item__icon {
+    max-width: 80px;
+    max-height: 100px;
+    margin-bottom: 25px;
+}
+
+.item__temp {
+    font-size: 20px;
+}
