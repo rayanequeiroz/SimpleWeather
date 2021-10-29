@@ -8,7 +8,7 @@ const getArrOfHours = (currentDay, nextDay) => {
 
         while(low <= high) {
             const mid = Math.floor((low + high) / 2);
-            const hour = moment(hours[mid].time, 'YYYY-MM-DD hh:mm').format('YYYY-MM-DD hh');
+            const hour = moment(hours[mid].time, 'YYYY-MM-DD hh:mm').format('HH');
             if(hour === currentHour) {
                 return mid;
             }
@@ -20,7 +20,7 @@ const getArrOfHours = (currentDay, nextDay) => {
         }
 
     }
-    const borderingPoint = binarySearch(currentDay, moment().format('YYYY-MM-DD hh'));
+    const borderingPoint = binarySearch(currentDay, moment().format('HH'));
     // create new array of Hours since current hour
     return currentDay.slice(borderingPoint).concat(nextDay.slice(0, borderingPoint));
 }
