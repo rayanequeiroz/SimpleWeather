@@ -9,7 +9,7 @@ import {getCitiesFromLocaleStorage} from "./store/favoriteCitiesReducer/favorite
 import {createTheme} from "@mui/material";
 import {ThemeProvider} from "@emotion/react";
 import {BrowserRouter} from "react-router-dom";
-import {changeTempScale} from "./store/weatherReducer/weatherReducer";
+import {changeForecastMod, changeTempScale} from "./store/weatherReducer/weatherReducer";
 
 if (!localStorage.getItem('cities')) {
     localStorage.setItem('cities', '[]');
@@ -21,6 +21,10 @@ if (!localStorage.getItem('cities')) {
 
 if (localStorage.getItem('tempScale')) {
     store.dispatch(changeTempScale(localStorage.getItem('tempScale')))
+}
+
+if(localStorage.getItem('forecastScale')) {
+    store.dispatch(changeForecastMod(localStorage.getItem('forecastScale')))
 }
 
 const theme = createTheme({
