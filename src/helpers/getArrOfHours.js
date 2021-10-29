@@ -1,6 +1,6 @@
 import moment from "moment";
 
-const getArrOfHours = (currentDay, nextDay) => {
+const getArrOfHours = (currentDay, nextDay, localtime) => {
     // In case there are more than a million hours in one day( It's a joke. Just practiced binary search ).
     const binarySearch = (hours, currentHour) => {
         let low = 0;
@@ -20,7 +20,7 @@ const getArrOfHours = (currentDay, nextDay) => {
         }
 
     }
-    const borderingPoint = binarySearch(currentDay, moment().format('HH'));
+    const borderingPoint = binarySearch(currentDay, moment(localtime, 'YYYY-MM-DD HH:mm').format('HH'));
     // create new array of Hours since current hour
     return currentDay.slice(borderingPoint).concat(nextDay.slice(0, borderingPoint));
 }

@@ -99,7 +99,7 @@ export const fetchWeather = (debouncedLocation, days = 3) => async () => {
     try {
         const data = await (fetchData(debouncedLocation, days));
         store.dispatch(setWeather(data));
-        const hourlyForecast = getArrOfHours(data.forecast.forecastday[0].hour, data.forecast.forecastday[1].hour);
+        const hourlyForecast = getArrOfHours(data.forecast.forecastday[0].hour, data.forecast.forecastday[1].hour, data.location.localtime);
         store.dispatch(setHourlyForecast(hourlyForecast));
     } catch (e) {
         console.error(e);
