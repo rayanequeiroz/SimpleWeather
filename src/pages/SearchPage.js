@@ -7,7 +7,7 @@ import {connect} from "react-redux";
 import ForecastPageButtonLink from "../components/ForecastPageButtonLink";
 import CurrentForecast from "../components/CurrentForecast";
 
-const WeatherToday = (props) => {
+const SearchPage = (props) => {
     if (props.responseLocation && props.location === props.responseLocation.toLowerCase()) {
         return (
             <div>
@@ -44,4 +44,4 @@ const mapStateToProps = (state) => ({
     responseLocation: state.weatherData.responseLocation,
 })
 
-export default connect(mapStateToProps)(WeatherToday);
+export default connect(mapStateToProps)(SearchPage);
