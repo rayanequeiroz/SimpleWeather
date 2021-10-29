@@ -20,11 +20,11 @@ export const setHourlyForecast = (response) => ({
             temp_f: hour.temp_f,
             hour: hour.time,
             isDay: hour.is_day,
-            code: hour.condition.code
+            code: hour.condition.code,
+            isRain: hour.will_it_rain
         };
     })
 })
-
 
 export const initialState = {
     location: '',
@@ -41,7 +41,8 @@ export const initialState = {
     tempScale: 'celsius',
     hourlyForecast: [],
     threeDayForecast: [],
-    forecastMod: 'threeDay'
+    forecastMod: 'threeDay',
+    localTime: ''
 };
 
 export function weatherReducer(state = initialState, action) {
@@ -63,14 +64,15 @@ export function weatherReducer(state = initialState, action) {
                 isDay: action.payload.current.is_day,
                 threeDayForecast: action.payload.forecast.forecastday.map((day) => {
                     return {
-                        date: day.time,
+                        date: day.date,
                         temp_c: day.day.avgtemp_c,
                         temp_f: day.day.avgtemp_f,
-                        isDay: day.day.is_day,
+                        isDay: '1',
                         code: day.day.condition.code,
                         condition: day.day.condition.text.toLowerCase()
                     }
-                })
+                }),
+                localTime: action.payload.location.localtime
             };
         case SET_HOURLY_FORECAST:
             return {
@@ -99,7 +101,6 @@ export const fetchWeather = (debouncedLocation, days = 3) => async () => {
         store.dispatch(setWeather(data));
         const hourlyForecast = getArrOfHours(data.forecast.forecastday[0].hour, data.forecast.forecastday[1].hour);
         store.dispatch(setHourlyForecast(hourlyForecast));
-        localStorage.setItem('location', data.location.name);
     } catch (e) {
         console.error(e);
     }

@@ -14,10 +14,8 @@ const CitySearch = (props) => {
     }, [])
 
     useEffect(() => {
-        return () => {
             localStorage.setItem('location', props.location);
-        };
-    }, []);
+    }, [props.responseLocation]);
 
     const debouncedLocation = useDebounce(props.location.trim(), 700);
 
@@ -45,7 +43,8 @@ const CitySearch = (props) => {
 
 const mapStateToProps = (state) => ({
     location: state.weatherData.location,
-    favoriteCities: state.weatherData.favoriteCities
+    responseLocation: state.weatherData.responseLocation,
+    favoriteCities: state.weatherData.favoriteCities,
 });
 
 const mapDispatchToProps = (dispatch) => ({
