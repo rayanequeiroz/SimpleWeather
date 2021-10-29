@@ -12,19 +12,19 @@ const CitiesList = (props) => {
             <div className='flex cities-list'>
                 <div className='blue-line'></div>
                 <div className='cities'>
-                    {props.cities.map((obj) => (
+                    {props.cities.map((city) => (
                         <button
                             onClick={() => {
-                                router.push(`/SimpleWeather/cities/${obj.city}`);
-                                props.updateCityInStore(obj.city);
+                                router.push(`/SimpleWeather/cities/${city.city}`);
+                                props.updateCityInStore(city.city);
                             }}
-                            key={obj.city}
+                            key={city.city}
                             className='cities__btn'
                         >
-                            <div>{obj.city}</div>
+                            <div>{city.city}</div>
                             <div className='cities__btn-group'>
-                                <WeatherIcon className='cities__btn-icon' code={obj.code} isDay={obj.isDay} color={{fill:'#2D81FF'}}/>
-                                <div>{props.tempScale === "celsius" ? obj.temp_c : obj.temp_f}°</div>
+                                <WeatherIcon className='cities__btn-icon' code={city.code} isDay={city.isDay} color={{fill:'#2D81FF'}}/>
+                                <div>{props.tempScale === "celsius" ? city.temp_c : city.temp_f}°</div>
                             </div>
                         </button>
                     ))}
