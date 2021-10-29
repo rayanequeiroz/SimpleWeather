@@ -15,7 +15,23 @@ const ForecastToggle = (props) => {
                 color='secondary'
                 value={value}
                 exclusive
-                sx={{height: '20px'}}
+                sx={{
+                    '& .MuiToggleButton-root': {
+                        backgroundColor: 'transparent',
+                        borderColor: '#F9FBFF',
+                        color: '#2d81ff',
+                        textTransform: 'capitalize',
+                        '&.Mui-selected': {
+                            backgroundColor: '#6BA6FF',
+                            color: '#ffffff',
+                        },
+                        '&.Mui-selected:hover': {
+                            backgroundColor: '#5096ff',
+                            color: '#ffffff',
+                        }
+                    },
+                    height: '24px',
+                }}
                 fullWidth={true}
                 className='forecast-toggle'
                 onChange={() => {
@@ -30,50 +46,10 @@ const ForecastToggle = (props) => {
                     }
                 }}
             >
-                <ToggleButton
-                    value='hourly'
-                    sx={{
-                        '&.MuiToggleButton-root': {
-                            borderRadius: '20px',
-                            backgroundColor: 'transparent',
-                            borderColor: '#F9FBFF',
-                            color: '#2d81ff',
-                            textTransform: 'capitalize',
-                        },
-                        '&.Mui-selected': {
-                            backgroundColor: '#6BA6FF',
-                            borderColor: '#6BA6FF',
-                            color: '#ffffff',
-                        },
-                        '&.Mui-selected:hover': {
-                            backgroundColor: '#5096ff',
-                            color: '#ffffff',
-                        },
-                    }}
-                >
+                <ToggleButton value='hourly' sx={{borderRadius: '20px 0 0 20px'}}>
                     Hourly
                 </ToggleButton>
-                <ToggleButton
-                    value='threeDay'
-                    sx={{
-                        '&.MuiToggleButton-root': {
-                            borderRadius: '20px',
-                            backgroundColor: 'transparent',
-                            borderColor: '#F9FBFF',
-                            color: '#2d81ff',
-                            textTransform: 'capitalize',
-                        },
-                        '&.Mui-selected': {
-                            backgroundColor: '#6BA6FF',
-                            borderColor: '#6BA6FF',
-                            color: '#ffffff',
-                        },
-                        '&.Mui-selected:hover': {
-                            backgroundColor: '#5096ff',
-                            color: '#ffffff',
-                        },
-                    }}
-                >
+                <ToggleButton value='threeDay' sx={{borderRadius: '0 20px 20px 0'}}>
                     Three-day
                 </ToggleButton>
             </ToggleButtonGroup>
