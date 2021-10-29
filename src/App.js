@@ -1,10 +1,10 @@
 import React from 'react';
-import {Redirect, Route, Router, Switch} from 'react-router-dom';
-import WeatherToday from './pages/WeatherToday';
 import {history} from './historyVar';
+import {Redirect, Route, Router, Switch} from 'react-router-dom';
 import CitiesPage from "./pages/CitiesPage";
 import CityPage from "./pages/CityPage";
 import ForecastPage from "./pages/ForecastPage";
+import SearchPage from "./pages/SearchPage";
 
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
         <Router history={history}>
             <Switch>
                 <Route exact path='/SimpleWeather'>
-                    <WeatherToday/>
+                    <SearchPage/>
                 </Route>
                 <Route exact path='/SimpleWeather/cities'>
                     <CitiesPage/>
