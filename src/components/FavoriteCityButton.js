@@ -11,6 +11,7 @@ const FavoriteCityButton = (props) => {
         setFavorite(props.cities.find(obj => obj.city === props.location));
     }, [props.location]);
 
+    //Make the button inactive if the city is not found
     useEffect(() => {
         if (
             props.location &&
