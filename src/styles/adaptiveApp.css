@@ -103,7 +103,7 @@
     }
 
     .cities__btn-group div {
-        width:35px;
+        width: 35px;
     }
 
     .cities {
@@ -128,6 +128,15 @@
         border-top: 1px solid #F9FBFF;
     }
 
+    .swiper {
+        width: 300px;
+        height: 225px;
+    }
+
+    .item__icon {
+        max-width: 55px;
+        max-height: 80px;
+    }
 }
 
 @media (max-width: 413px) {
@@ -203,7 +212,7 @@
     }
 
     .cities__btn-group div {
-        width:35px;
+        width: 35px;
     }
 
     .cities {
@@ -224,5 +233,15 @@
     .cities-page__back-btn {
         top: 46px;
         left: 10px;
+    }
+
+    .swiper {
+        width: 260px;
+        height: 225px;
+    }
+
+    .item__icon {
+        max-width: 50px;
+        max-height: 70px;
     }
 }
