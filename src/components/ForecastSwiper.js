@@ -9,11 +9,9 @@ import 'swiper';
 import '../styles/ForecastSwiper.css';
 import moment from "moment";
 import WeatherIcon from "./WeatherIcon";
-import {Redirect, useHistory} from "react-router-dom";
+import {Redirect} from "react-router-dom";
 
 const ForecastSwiper = (props) => {
-    const router = useHistory();
-
     SwiperCore.use([Pagination]);
     if (props.forecastMod === 'threeDay' && props.threeDayForecast.length) {
         return (
