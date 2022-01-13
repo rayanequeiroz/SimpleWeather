@@ -1,8 +1,13 @@
 # 🌤SimpleWeather is a small SPA I made as a pet project
 
 Hello! This is my first SPA using a combination of React and Redux.\
-It implements the loading of data from API of [weatherapi.com](https://www.weatherapi.com/)\
-I also used the [MUI library](https://mui.com/) for buttons and a [react-router](https://reactrouter.com/) to navigate through the pages.
+Features:
+- City search.
+- Page with an hourly / three-day weather forecast.
+- Adding a city to the list of favorites (stored in localStorage).
+- The ability to switch the temperature from Celsius to Fahrenheit.
+
+In my work I used [Swiper.js](https://swiperjs.com/), [moment.js](https://momentjs.com/) and [Material UI](https://mui.com/).
 
 ### 🐱‍🏍If you want to see a demo go [here](https://keyofevergreen.github.io/SimpleWeather/)!
 
