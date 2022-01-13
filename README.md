@@ -4,10 +4,9 @@ Hello! This is my first SPA using a combination of React and Redux.\
 It implements the loading of data from API of [weatherapi.com](https://www.weatherapi.com/)\
 I also used the [MUI library](https://mui.com/) for buttons and a [react-router](https://reactrouter.com/) to navigate through the pages.
 
+### 🐱‍🏍If you want to see a demo go [here](https://keyofevergreen.github.io/SimpleWeather/)!
 
 ## How to use
-### 🐱‍🏍Go to the [gh-pages](https://keyofevergreen.github.io/SimpleWeather/)!
-### Or
 
 1. You need to register at [weatherapi.com](https://www.weatherapi.com/) and get an API key (Note that the request has all the checkboxes next to the fields in the tab "API Response Fields").
 2. Clone this repository.
